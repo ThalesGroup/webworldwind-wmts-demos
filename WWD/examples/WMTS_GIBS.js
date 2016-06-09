@@ -3,7 +3,7 @@
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
- * @version $Id: WMTS.js 2016-06-09 rsirac $
+ * @version $Id: WMTS_GIBS.js 2016-06-09 rsirac $
  */
 
 requirejs(['../src/WorldWind',
