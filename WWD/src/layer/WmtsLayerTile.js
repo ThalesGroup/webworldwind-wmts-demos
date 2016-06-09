@@ -122,12 +122,7 @@ define([
                     children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
                 }
             }
-
-            console.log("Tile : ("+this.tileMatrix+", "+this.row+", "+this.column+")");
-            console.log(this);
-            console.log("Children");
-            console.log(children);
-
+            
             return children;
         };
 
