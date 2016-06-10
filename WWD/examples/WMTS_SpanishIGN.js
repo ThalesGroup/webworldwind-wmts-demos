@@ -31,7 +31,7 @@ requirejs(['../src/WorldWind',
                 var layers = [
 
                     // Internal layer
-                    {layer: new WorldWind.BMNGLandsatLayer(), enabled: true},
+                    {layer: new WorldWind.OpenStreetMapImageLayer(null), enabled: true},
 
                     // WMTS layers
                     {layer: new WorldWind.WmtsLayer(wmtsCapabilitiesIGN1, "GoogleMapsCompatible"), enabled: true},
