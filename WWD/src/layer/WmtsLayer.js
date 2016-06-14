@@ -44,6 +44,8 @@ define([
          * @augments Layer
          * @classdesc Displays a WMTS image layer.
          * @param {WmtsLayerCapabilities} layerCaps The WMTS layer capabilities describing this layer.
+         * @param {String} tileMatrixSet The tileMatrixSet to use for this layer. Must be one of those listed in the
+         * accompanying layer capabilities. May be null, in which case the first tileMatrixSet recognized is used.
          * @param {String} styleIdentifier The style to use for this layer. Must be one of those listed in the accompanying
          * layer capabilities. May be null, in which case the WMTS server's default style is used.
          * @param {String} timeString The time parameter passed to the WMTS server when imagery is requested. May be
@@ -110,7 +112,19 @@ define([
                     }
                 }
             } else { // resource-oriented interface not supported, so use KVP interface
-                this.serviceUrl = layerCaps.capabilities.getGetTileKvpAddress();
+                this.serviceUrl = null;
+
+                // TODO : getGetTileKvpAddress code is here for hardcoded layers
+                for (var i = 0; i < layerCaps.capabilities.operationsMetadata.operation.length; i++) {
+                    var operation = layerCaps.capabilities.operationsMetadata.operation[i];
+
+                    if (operation.name === "GetTile") {
+                        this.serviceUrl = operation.dcp[0].http.get[0].href;
+                    }
+                }
+
+
+
                 if (this.serviceUrl) {
                     this.serviceUrl = WmsUrlBuilder.fixGetMapString(this.serviceUrl);
                 }
@@ -353,7 +367,6 @@ define([
                     ancestorTile = this.currentAncestorTile;
                     this.currentAncestorTile = tile;
                 }
-
                 var nextLevel = this.tileMatrixSet.tileMatrix[tile.tileMatrix.levelNumber + 1],
                 subTiles = tile.subdivideToCache(nextLevel, this, this.tileCache);
 

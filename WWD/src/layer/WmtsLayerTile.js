@@ -77,43 +77,19 @@ define([
                         "The specified tile factory is null or undefined."));
             }
 
-            var subFactorLat,
-                subFactorLon,
-                subRow,
+            var subRow,
                 subCol,
                 children = [];
 
             // TODO
-            // subFactorLat = Math.ceil(tileMatrix.matrixHeight / this.tileMatrix.matrixHeight);
-            // subFactorLon = Math.ceil(tileMatrix.matrixWidth / this.tileMatrix.matrixWidth);
-            //
-            // for (var i = 0; i < subFactorLat ; i++) {
-            //     for (var j = 0; j < subFactorLon ; j++) {
-            //         subRow = subFactorLat * this.row + i;
-            //         subCol = subFactorLon * this.column + j;
-            //         children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
-            //     }
-            // }
-
             var subFactorLatCeil = Math.ceil(tileMatrix.matrixHeight / this.tileMatrix.matrixHeight);
             var subFactorLonCeil = Math.ceil(tileMatrix.matrixWidth / this.tileMatrix.matrixWidth);
             var subFactorLatFloor = Math.floor(tileMatrix.matrixHeight / this.tileMatrix.matrixHeight);
             var subFactorLonFloor = Math.floor(tileMatrix.matrixWidth / this.tileMatrix.matrixWidth);
 
-            var indI;
-            var indJ;
 
-            if (subFactorLatCeil !== subFactorLatFloor) {
-                indI = (this.row == (this.tileMatrix.matrixHeight-1)) ? subFactorLatFloor : subFactorLatCeil;
-            } else {
-                indI = subFactorLatCeil;
-            }
-
-            if (subFactorLonCeil !== subFactorLonFloor) {
-                indJ = (this.column == (this.tileMatrix.matrixWidth-1)) ? subFactorLonFloor : subFactorLonCeil;
-            } else {
-                indJ = subFactorLonCeil;
-            }
+            var indI = (this.row == (this.tileMatrix.matrixHeight-1)) ? subFactorLatFloor : subFactorLatCeil;
+            var indJ = (this.column == (this.tileMatrix.matrixWidth-1)) ? subFactorLonFloor : subFactorLonCeil;
 
             for (var i = 0; i < indI ; i++) {
                 for (var j = 0; j < indJ ; j++) {
@@ -122,7 +98,7 @@ define([
                     children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
                 }
             }
-            
+
             return children;
         };
 
