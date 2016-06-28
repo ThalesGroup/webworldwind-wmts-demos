@@ -83,7 +83,7 @@ define(['../error/ArgumentError',
 
             // Style
             var styleName = (!style) ? "default" : style;
-            this.style = [{identifier:styleName, isDefault:"true"}];
+            this.style = (!style) ? [] : [{identifier:styleName, isDefault:"true"}];
 
             // TileMatrixSet
             if (!matrixSet) { // matrixSet

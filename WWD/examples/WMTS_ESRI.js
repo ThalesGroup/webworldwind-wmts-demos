@@ -47,7 +47,7 @@ requirejs(['../src/WorldWind',
                                         var layers = [
 
                                             // WMTS layers
-                                            {layer: new WorldWind.WmtsLayer(wmtsCapabilitiesWorldImagery), enabled: true},
+                                            {layer: new WorldWind.WmtsLayer(wmtsCapabilitiesWorldImagery), enabled: false},
                                             {layer: new WorldWind.WmtsLayer(wmtsCapabilitiesWorldStreetMap), enabled: false},
                                             {layer: new WorldWind.WmtsLayer(wmtsCapabilitiesWorldTopoMap), enabled: false},
 
