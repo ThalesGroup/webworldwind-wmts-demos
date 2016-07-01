@@ -43,7 +43,7 @@ requirejs(['../src/WorldWind',
         });
 
 
-        var wmtsLayerCaps = new WorldWind.WmtsLayerCaps("eoc:world_relief_bw", "", "image/png", "http://tiles.geoservice.dlr.de/service/wmts?", "default", "EPSG:4326", true,"EPSG:4326", {
+        var wmtsLayerCaps = new WorldWind.WmtsLayerCaps("eoc:world_relief_bw", "World relief", "image/png", "http://tiles.geoservice.dlr.de/service/wmts?", "default", "EPSG:4326", true,"EPSG:4326", {
             topLeftCorner: [90, -180],
             extent: [-180, -90, 180, 90],
             resolutions: resolutions4326,
