@@ -25,6 +25,25 @@ requirejs(['../src/WorldWind',
 
         var deferred = $.Deferred();
 
+        var maxResolution4326 = 0.703125;
+        var resolutions4326 = [];
+        for (var i = 0; i < 18; i++) {
+            resolutions4326.push(maxResolution4326/Math.pow(2,i));
+        }
+        var CapsForTms = new WorldWind.TmsLayerCaps({
+            extent : [-180, -90, 180, 90],
+            resolutions : resolutions4326,
+            origin: [-180, -90],
+            imageFormat : "image/png",
+            projection : "EPSG:4326",
+            tileSize : 256,
+            matrixSet : "WGS84",
+            layerName : "GEBCO_08_Grid",
+            url : "http://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapcache/tms/1.0.0/"
+        });
+
+
+
         $.get('http://mrdata.usgs.gov/mapcache/tms/1.0.0/', function(response) {
 
             console.log(response);
@@ -51,6 +70,7 @@ requirejs(['../src/WorldWind',
                 // Internal layer
                 var layers = [
                     {layer: new WorldWind.BMNGLandsatLayer(), enabled: true},
+                    {layer: new WorldWind.TmsLayer(CapsForTms, "GEBCO"), enabled: false, selected : true},
                     {layer: new WorldWind.TmsLayer(tmsLayer1, "akgeol"), enabled: false, selected : true},
                     {layer: new WorldWind.TmsLayer(tmsLayer2, "sim3340"), enabled: false, selected : true},
                     {layer: new WorldWind.TmsLayer(tmsLayer3, "alteration"), enabled: false, selected : true},
