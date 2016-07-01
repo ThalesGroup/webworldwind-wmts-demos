@@ -51,11 +51,11 @@ requirejs(['../src/WorldWind',
                 // Internal layer
                 var layers = [
                     {layer: new WorldWind.BMNGLandsatLayer(), enabled: true},
-                    {layer: new WorldWind.TmsLayer(tmsLayer1, "Alaska akgeol"), enabled: false, selected : true},
-                    {layer: new WorldWind.TmsLayer(tmsLayer2, "Alaska sim3340"), enabled: false, selected : true},
-                    {layer: new WorldWind.TmsLayer(tmsLayer3, "Alaska alteration"), enabled: false, selected : true},
-                    {layer: new WorldWind.TmsLayer(tmsLayer4, "Alaska mrds"), enabled: false, selected : true},
-                    {layer: new WorldWind.TmsLayer(tmsLayer5, "Alaska magnetic"), enabled: false, selected : true},
+                    {layer: new WorldWind.TmsLayer(tmsLayer1, "akgeol"), enabled: false, selected : true},
+                    {layer: new WorldWind.TmsLayer(tmsLayer2, "sim3340"), enabled: false, selected : true},
+                    {layer: new WorldWind.TmsLayer(tmsLayer3, "alteration"), enabled: false, selected : true},
+                    {layer: new WorldWind.TmsLayer(tmsLayer4, "mrds"), enabled: false, selected : true},
+                    {layer: new WorldWind.TmsLayer(tmsLayer5, "magnetic"), enabled: false, selected : true},
                     {layer: new WorldWind.CompassLayer(), enabled: true},
                     {layer: new WorldWind.CoordinatesDisplayLayer(wwd), enabled: true},
                     {layer: new WorldWind.ViewControlsLayer(wwd), enabled: true}
