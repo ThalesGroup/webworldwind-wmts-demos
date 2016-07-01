@@ -43,6 +43,13 @@ requirejs(['../src/WorldWind',
         });
 
 
+        var wmtsLayerCaps = new WorldWind.WmtsLayerCaps("eoc:world_relief_bw", "", "image/png", "http://tiles.geoservice.dlr.de/service/wmts?", "default", "EPSG:4326", true,"EPSG:4326", {
+            topLeftCorner: [90, -180],
+            extent: [-180, -90, 180, 90],
+            resolutions: resolutions4326,
+            tileSize: 256
+        });
+
 
         $.get('http://mrdata.usgs.gov/mapcache/tms/1.0.0/', function(response) {
 
@@ -69,12 +76,12 @@ requirejs(['../src/WorldWind',
 
                 // Internal layer
                 var layers = [
-                    {layer: new WorldWind.BMNGLandsatLayer(), enabled: true},
-                    {layer: new WorldWind.TmsLayer(CapsForTms, "GEBCO"), enabled: false, selected : true},
+                    {layer: new WorldWind.BMNGLandsatLayer(), enabled: false},
+                    {layer: new WorldWind.WmtsLayer(wmtsLayerCaps), enabled: true},
                     {layer: new WorldWind.TmsLayer(tmsLayer1, "akgeol"), enabled: false, selected : true},
                     {layer: new WorldWind.TmsLayer(tmsLayer2, "sim3340"), enabled: false, selected : true},
                     {layer: new WorldWind.TmsLayer(tmsLayer3, "alteration"), enabled: false, selected : true},
-                    {layer: new WorldWind.TmsLayer(tmsLayer4, "mrds"), enabled: false, selected : true},
+                    {layer: new WorldWind.TmsLayer(tmsLayer4, "mrds"), enabled: true, selected : true},
                     {layer: new WorldWind.TmsLayer(tmsLayer5, "magnetic"), enabled: false, selected : true},
                     {layer: new WorldWind.CompassLayer(), enabled: true},
                     {layer: new WorldWind.CoordinatesDisplayLayer(wwd), enabled: true},
