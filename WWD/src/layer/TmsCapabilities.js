@@ -1,24 +1,12 @@
-/*
- * Copyright (C) 2015 United States Government as represented by the Administrator of the
- * National Aeronautics and Space Administration. All Rights Reserved.
- */
 /**
- * @exports WmtsCapabilities
+ * @exports TmsCapabilities
  */
 define([
         '../error/ArgumentError',
-        '../util/Logger',
-        '../ogc/OwsLanguageString',
-        '../ogc/OwsOperationsMetadata',
-        '../ogc/OwsServiceIdentification',
-        '../ogc/OwsServiceProvider'
+        '../util/Logger'
     ],
     function (ArgumentError,
-              Logger,
-              OwsLanguageString,
-              OwsOperationsMetadata,
-              OwsServiceIdentification,
-              OwsServiceProvider) {
+              Logger) {
         "use strict";
 
         /**

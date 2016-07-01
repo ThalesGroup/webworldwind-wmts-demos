@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2015 United States Government as represented by the Administrator of the
- * National Aeronautics and Space Administration. All Rights Reserved.
- */
 /**
  * @exports TmsLayer
  */
@@ -10,10 +6,8 @@ define([
         '../geom/Location',
         '../util/Logger',
         '../geom/Sector',
-        '../cache/MemoryCache',
         '../render/Texture',
         '../layer/TiledImageLayer',
-        '../util/WmsUrlBuilder',
         '../util/WWMath',
         '../util/WWUtil'
     ],
@@ -21,10 +15,8 @@ define([
               Location,
               Logger,
               Sector,
-              MemoryCache,
               Texture,
               TiledImageLayer,
-              WmsUrlBuilder,
               WWMath,
               WWUtil
     ) {
@@ -41,7 +33,7 @@ define([
 
             TiledImageLayer.call(
                 this,
-                new Sector(layerCaps.extent[0], layerCaps.extent[2], layerCaps.extent[1], layerCaps.extent[3]),
+                new Sector(layerCaps.extent[1], layerCaps.extent[3], layerCaps.extent[0], layerCaps.extent[2]),
                 new Location(36, 36), // TODO: How to determine best delta
                 18,
                 layerCaps.imageFormat,
@@ -61,27 +53,16 @@ define([
                         "No image format supported."));
             }
 
-
-
             this.projection = layerCaps.projection;
-
 
             this.urlBuilder = {
                 urlForTile: function (tile, imageFormat) {
-                    // Todo
-                    if (TmsLayer.isEpsg4326Crs(layerCaps.projection)) {
                         return layerCaps.url + layerCaps.layerName + "@" + layerCaps.matrixSet + "/" +
                             (tile.level.levelNumber) + "/" + tile.column + "/" + (tile.row) + "." + format;
-                    }
-                    else {
-                        return layerCaps.url + layerCaps.layerName + "@" + layerCaps.matrixSet + "/" +
-                            (tile.level.levelNumber + 1) + "/" + tile.column + "/" + (tile.row) + "." + format;
-                    }
                 }
             };
 
             this.detailControl = 0.5;
-
 
             this.imageSize = layerCaps.tileSize;
             this.origin = layerCaps.origin;
@@ -110,65 +91,11 @@ define([
 
             this.topLevelTiles = [];
 
-            // Todo
-            if (TmsLayer.isEpsg4326Crs(this.projection)) {
                 for (var j = 0; j < this.nbTilesHeight[0]; j++) {
                     for (var i = 0; i < this.nbTilesWidth[0]; i++) {
                         this.topLevelTiles.push(this.createTile(this.sector, this.levels.firstLevel(), j, i));
                     }
                 }
-            }
-            else {
-                for (var j = 0; j <= this.nbTilesHeight[0]; j++) {
-                    for (var i = 0; i <= this.nbTilesWidth[0]; i++) {
-                        this.topLevelTiles.push(this.createTile(this.sector, this.levels.firstLevel(), j, i));
-                    }
-                }
-            }
-
-
-
-            // this.topLevelTiles.push(this.createTile(new Sector(-85.05121885855424, 0.35156233340332066, -180, 0.3515645394494346), this.levels.firstLevel(), 1, 0));
-            // this.topLevelTiles.push(this.createTile(new Sector(-85.05121885855424, 0.35156233340332066, -0.3515645394494346, 180), this.levels.firstLevel(), 1, 1));
-            // this.topLevelTiles.push(this.createTile(new Sector(-0.35156233340332066, 85.05121885855424, -180, 0.3515645394494346), this.levels.firstLevel(), 0, 0));
-            // this.topLevelTiles.push(this.createTile(new Sector(-0.35156233340332066, 85.05121885855424, -0.3515645394494346, 180), this.levels.firstLevel(), 0, 1));
-
-            // this.topLevelTiles.push(this.createTile(new Sector(66.4433147615984, 85.05121885855424, -180, -89.82473982933192), this.levels.levels[1] , 3, 0));
-            // this.topLevelTiles.push(this.createTile(new Sector(0, 66.58342515254901, -180, -89.82473982933192), this.levels.levels[1] , 2, 0));
-            // this.topLevelTiles.push(this.createTile(new Sector(-66.5134685179377, 0.17578199396699903, -180, -89.82473982933192), this.levels.levels[1] , 1, 0));
-            // this.topLevelTiles.push(this.createTile(new Sector(-85.05121885855424, -66.44331476159842, -180, -89.82473982933192), this.levels.levels[1] , 0, 0));
-            // this.topLevelTiles.push(this.createTile(new Sector(66.4433147615984, 85.05121885855424, -90.17630436878135, 0), this.levels.levels[1] , 3, 1));
-            // this.topLevelTiles.push(this.createTile(new Sector(0, 66.58342515254901, -90.17630436878135, 0), this.levels.levels[1] , 2, 1));
-            // this.topLevelTiles.push(this.createTile(new Sector(-66.5134685179377, 0.17578199396699903, -90.17630436878135, 0), this.levels.levels[1] , 1, 1));
-            // this.topLevelTiles.push(this.createTile(new Sector(-85.05121885855424, -66.44331476159842, -90.17630436878135, 0), this.levels.levels[1] , 0, 1));
-            // this.topLevelTiles.push(this.createTile(new Sector(66.4433147615984, 85.05121885855424, -0.1757822697247173, 90.00052209905664), this.levels.levels[1] , 3, 2));
-            // this.topLevelTiles.push(this.createTile(new Sector(0, 66.58342515254901, -0.1757822697247173, 90.00052209905664), this.levels.levels[1] , 2, 2));
-            // this.topLevelTiles.push(this.createTile(new Sector(-66.5134685179377, 0.17578199396699903, -0.1757822697247173, 90.00052209905664), this.levels.levels[1] , 1, 2));
-            // this.topLevelTiles.push(this.createTile(new Sector(-85.05121885855424, -66.44331476159842, -0.1757822697247173, 90.00052209905664), this.levels.levels[1] , 0, 2));
-            // this.topLevelTiles.push(this.createTile(new Sector(66.4433147615984, 85.05121885855424, 89.82473982933192, 180), this.levels.levels[1] , 3, 3));
-            // this.topLevelTiles.push(this.createTile(new Sector(0, 66.58342515254901, 89.82473982933192, 180), this.levels.levels[1] , 2, 3));
-            // this.topLevelTiles.push(this.createTile(new Sector(-66.5134685179377, 0.17578199396699903, 89.82473982933192, 180), this.levels.levels[1] , 1, 3));
-            // this.topLevelTiles.push(this.createTile(new Sector(-85.05121885855424, -66.44331476159842, 89.82473982933192, 180), this.levels.levels[1] , 0, 3));
-
-
-            /*
-             TmsLayer.js:258 (2, 2, 0) : (-0.35156233340332066, 42.34982826257546, -180, -89.82421773027528)
-             TmsLayer.js:258 (2, 2, 1) : (-0.35156233340332066, 42.34982826257546, -89.82421773027528, 0.3515645394494346)
-             TmsLayer.js:258 (2, 3, 0) : (42.34982826257546, 85.05121885855424, -180, -89.82421773027528)
-             TmsLayer.js:258 (2, 3, 1) : (42.34982826257546, 85.05121885855424, -89.82421773027528, 0.3515645394494346)
-             TmsLayer.js:258 (2, 2, 2) : (-0.35156233340332066, 42.34982826257546, -0.3515645394494346, 89.82421773027528)
-             TmsLayer.js:258 (2, 2, 3) : (-0.35156233340332066, 42.34982826257546, 89.82421773027528, 180)
-             TmsLayer.js:258 (2, 3, 2) : (42.34982826257546, 85.05121885855424, -0.3515645394494346, 89.82421773027528)
-             TmsLayer.js:258 (2, 3, 3) : (42.34982826257546, 85.05121885855424, 89.82421773027528, 180)
-             TmsLayer.js:258 (2, 0, 0) : (-85.05121885855424, -42.34982826257546, -180, -89.82421773027528)
-             TmsLayer.js:258 (2, 0, 1) : (-85.05121885855424, -42.34982826257546, -89.82421773027528, 0.3515645394494346)
-             TmsLayer.js:258 (2, 1, 0) : (-42.34982826257546, 0.35156233340332066, -180, -89.82421773027528)
-             TmsLayer.js:258 (2, 1, 1) : (-42.34982826257546, 0.35156233340332066, -89.82421773027528, 0.3515645394494346)
-             TmsLayer.js:258 (2, 0, 3) : (-85.05121885855424, -42.34982826257546, 89.82421773027528, 180)
-             TmsLayer.js:258 (2, 1, 3) : (-42.34982826257546, 0.35156233340332066, 89.82421773027528, 180)
-             TmsLayer.js:258 (2, 0, 2) : (-85.05121885855424, -42.34982826257546, -0.3515645394494346, 89.82421773027528)
-             TmsLayer.js:258 (2, 1, 2) : (-42.34982826257546, 0.35156233340332066, -0.3515645394494346, 89.82421773027528)
-             */
         };
 
         TmsLayer.isEpsg4326Crs = function (crs) {
@@ -184,8 +111,11 @@ define([
             return (crs.indexOf("OGC") >= 0) && (crs.indexOf("CRS84") >= 0);
         };
 
+
         TmsLayer.prototype.createTexture = function (dc, tile, image) {
+
             if (TmsLayer.isEpsg4326Crs(this.projection)) {
+
                 return new Texture(dc.currentGlContext, image);
             } else if (TmsLayer.isEpsg3857Crs(this.projection)) {
                 return this.createTexture3857(dc, tile, image);
@@ -207,7 +137,7 @@ define([
         };
 
         TmsLayer.prototype.createTile4326 = function (sector, level, row, column) {
-            var tileDeltaLat = this.sector.deltaLatitude() / this.nbTilesHeight[level.levelNumber], // TODO: calculate from metadata
+            var tileDeltaLat = this.sector.deltaLatitude() / this.nbTilesHeight[level.levelNumber],
                 tileDeltaLon = this.sector.deltaLongitude() / this.nbTilesWidth[level.levelNumber],
 
                 //Todo
@@ -217,14 +147,14 @@ define([
                 minLon = this.origin[0] + tileDeltaLon * column,
                 maxLon = minLon + tileDeltaLon;
 
-            var sector = new Sector(minLat, maxLat, minLon, maxLon);
-            console.log("CreateTile4326 ("+(level.levelNumber)+", "+row+", "+column+") : ("+minLat+", "+maxLat+", "+minLon+", "+maxLon+")");
+            sector = new Sector(minLat, maxLat, minLon, maxLon);
 
             return TiledImageLayer.prototype.createTile.call(this, sector, level, row, column);
         };
 
 
         TmsLayer.prototype.createTile3857 = function (sector, level, row, column) {
+            
             var mapSize = this.mapSizeForLevel(level.levelNumber),
                 swX = WWMath.clamp(column * this.imageSize, 0, mapSize),
                 //Todo
@@ -246,19 +176,16 @@ define([
 
             sector = new Sector(swLat, neLat, swLon, neLon);
 
-            // console.log("CreateTile3857 ("+(level.levelNumber+1)+", "+row+", "+column+") : ("+swLat+", "+neLat+", "+swLon+", "+neLon+")");
             return TiledImageLayer.prototype.createTile.call(this, sector, level, row, column);
         };
 
-        // Todo
         TmsLayer.prototype.mapSizeForLevel = function (levelNumber) {
-            return 256 << (levelNumber + 1);
+            return this.imageSize * this.nbTilesHeight[levelNumber];
         };
 
 
 
         TmsLayer.prototype.createTexture3857 = function (dc, tile, image) {
-            // console.log("("+(tile.level.levelNumber+1)+", "+tile.row+", "+tile.column+") : ("+tile.sector.minLatitude+", "+tile.sector.maxLatitude+", "+tile.sector.minLongitude+", "+tile.sector.maxLongitude+")");
             if (!this.destCanvas) {
                 // Create a canvas we can use when unprojecting retrieved images.
                 this.destCanvas = document.createElement("canvas");
@@ -312,7 +239,7 @@ define([
             return new Texture(dc.currentGlContext, destCanvas);
         };
 
-        
+
 
         return TmsLayer;
     }

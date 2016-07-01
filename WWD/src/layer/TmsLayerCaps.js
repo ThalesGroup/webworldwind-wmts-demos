@@ -1,9 +1,5 @@
-/*
- * Copyright (C) 2015 United States Government as represented by the Administrator of the
- * National Aeronautics and Space Administration. All Rights Reserved.
- */
 /**
- * @exports WmtsLayerCaps
+ * @exports TmsLayerCaps
  */
 define(['../error/ArgumentError',
         '../util/Logger'],
@@ -12,7 +8,26 @@ define(['../error/ArgumentError',
         "use strict";
 
 
-
+        /**
+         * Constructs a TMS layer capabilities on the fly.
+         * @alias TmsLayerCaps
+         * @constructor
+         * @augments Layer capabilities
+         * @classdesc Create a TMS layer capabilities.
+         * @param {{}} layerCaps The information to create the configuration : must contain the global extent,
+         * the resolutions array, the origin, the image format, the projection, the tile size, the matrix set, the
+         * layer name and the server url
+         * @throws {ArgumentError} If the layerCaps is null or undefined.
+         * @throws {ArgumentError} If the specified layerCaps.extent is null or undefined.
+         * @throws {ArgumentError} If the specified layerCaps.resolutions is null or undefined.
+         * @throws {ArgumentError} If the specified layerCaps.origin is null or undefined.
+         * @throws {ArgumentError} If the specified layerCaps.imageFormat is null or undefined.
+         * @throws {ArgumentError} If the specified layerCaps.projection is null or undefined.
+         * @throws {ArgumentError} If the specified layerCaps.tileSize is null or undefined.
+         * @throws {ArgumentError} If the specified layerCaps.matrixSet is null or undefined.
+         * @throws {ArgumentError} If the specified layerCaps.layerName is null or undefined.
+         * @throws {ArgumentError} If the specified layerCaps.url is null or undefined.
+         */
         var TmsLayerCaps = function (layerCaps) {
 
             if (!layerCaps) {
