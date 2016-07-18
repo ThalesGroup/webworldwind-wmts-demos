@@ -43,7 +43,7 @@ requirejs(['../src/WorldWind',
         });
 
 
-            var matrixset = WorldWind.WmtsLayer.createTileMatrixSet(
+        var matrixset = WorldWind.WmtsLayer.createTileMatrixSet(
                 {
                         matrixSet : "EPSG:4326",
                         prefix : true,
@@ -54,7 +54,7 @@ requirejs(['../src/WorldWind',
                         tileSize: 256
                 }
             );
-            var wmtsLayer = new WorldWind.WmtsLayer(
+         var wmtsLayer = new WorldWind.WmtsLayer(
                 {
                         identifier : "eoc:world_relief_bw",
                         url : "https://tiles.geoservice.dlr.de/service/wmts?",
