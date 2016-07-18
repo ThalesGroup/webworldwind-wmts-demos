@@ -49,7 +49,7 @@ requirejs(['../src/WorldWind',
                         prefix : true,
                         projection : "EPSG:4326",
                         topLeftCorner: [90, -180],
-                        extent: extent4326,
+                        extent: [-180, -90, 180, 90],
                         resolutions: resolutions4326,
                         tileSize: 256
                 }
