@@ -164,7 +164,31 @@ define([
                 var tile = this.topLevelTiles[i];
 
                 if (!this.isTileTextureInMemory(dc, tile)) {
-                    this.retrieveTileImage(dc, tile);
+                    this.retrieveTileImage(dc, tile, true); // suppress redraw upon successful retrieval
+                }
+            }
+        };
+
+        /**
+         * Initiates retrieval of this layer's tiles that are visible in the specified World Window. Pre-populating is
+         * not required. It is used to eliminate the visual effect of loading tiles incrementally.
+         * @param {WorldWindow} wwd The world window for which to pre-populate this layer.
+         * @throws {ArgumentError} If the specified world window is null or undefined.
+         */
+        TiledImageLayer.prototype.prePopulateCurrentTiles = function (wwd) {
+            if (!wwd) {
+                throw new ArgumentError(
+                    Logger.logMessage(Logger.LEVEL_SEVERE, "TiledImageLayer", "prePopulate", "missingWorldWindow"));
+            }
+
+            var dc = wwd.drawContext;
+            this.assembleTiles(dc);
+
+            for (var i = 0, len = this.currentTiles.length; i < len; i++) {
+                var tile = this.currentTiles[i];
+
+                if (!this.isTileTextureInMemory(dc, tile)) {
+                    this.retrieveTileImage(dc, tile, true); // suppress redraw upon successful retrieval
                 }
             }
         };
@@ -212,7 +236,7 @@ define([
                 // Tile fading works visually only when the surface tiles are opaque, otherwise the surface flashes
                 // when two tiles are drawn over the same area, even though one of them is semi-transparent.
                 // So do not provide fading when the surface opacity is less than 1;
-                if (dc.surfaceOpacity >= 1) {
+                if (dc.surfaceOpacity >= 1 && this.opacity >= 1) {
                     // Fading of outgoing tiles requires determination of the those tiles. Prepare an object with all of
                     // the preceding frame's tiles so that we can subsequently compare the list of newly selected tiles
                     // with the previously selected tiles.
@@ -347,7 +371,7 @@ define([
 
             var texture = dc.gpuResourceCache.resourceForKey(tile.imagePath);
             if (texture) {
-                tile.opacity = 1;
+                tile.opacity = 1;;
                 this.currentTiles.push(tile);
 
                 // If the tile's texture has expired, cause it to be re-retrieved. Note that the current,
@@ -365,6 +389,7 @@ define([
                 if (this.isTileTextureInMemory(dc, this.currentAncestorTile)) {
                     // Set up to map the ancestor tile into the current one.
                     tile.fallbackTile = this.currentAncestorTile;
+                    tile.fallbackTile.opacity = 1;
                     this.currentTiles.push(tile);
                 }
             }
@@ -403,9 +428,11 @@ define([
          * compute or otherwise create the image.
          * @param {DrawContext} dc The current draw context.
          * @param {ImageTile} tile The tile for which to retrieve the resource.
+         * @param {Boolean} suppressRedraw true to suppress generation of redraw events when an image is successfully
+         * retrieved, otherwise false.
          * @protected
          */
-        TiledImageLayer.prototype.retrieveTileImage = function (dc, tile) {
+        TiledImageLayer.prototype.retrieveTileImage = function (dc, tile, suppressRedraw) {
             if (this.currentRetrievals.indexOf(tile.imagePath) < 0) {
                 if (this.absentResourceList.isResourceAbsent(tile.imagePath)) {
                     return;
@@ -434,10 +461,12 @@ define([
                         layer.currentTilesInvalid = true;
                         layer.absentResourceList.unmarkResourceAbsent(imagePath);
 
-                        // Send an event to request a redraw.
-                        var e = document.createEvent('Event');
-                        e.initEvent(WorldWind.REDRAW_EVENT_TYPE, true, true);
-                        canvas.dispatchEvent(e);
+                        if (!suppressRedraw) {
+                            // Send an event to request a redraw.
+                            var e = document.createEvent('Event');
+                            e.initEvent(WorldWind.REDRAW_EVENT_TYPE, true, true);
+                            canvas.dispatchEvent(e);
+                        }
                     }
                 };
 

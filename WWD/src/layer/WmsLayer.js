@@ -54,11 +54,6 @@ define([
                 throw new ArgumentError(
                     Logger.logMessage(Logger.LEVEL_SEVERE, "WmsLayer", "constructor", "No configuration specified."));
             }
-            else {
-                console.log("config : ");
-                console.log(config);
-            }
-
 
             var cachePath = config.service + config.layerNames + config.styleNames;
             if (timeString) {

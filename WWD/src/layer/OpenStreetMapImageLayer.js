@@ -31,7 +31,6 @@ define([
          * null or undefined.
          */
         var OpenStreetMapImageLayer = function (displayName) {
-
             this.imageSize = 256;
             displayName = displayName || "Open Street Map";
 
@@ -49,10 +48,8 @@ define([
             this.urlBuilder = {
                 urlForTile: function (tile, imageFormat) {
                     //var url = "http://a.tile.openstreetmap.org/" +
-
                     return "http://otile1.mqcdn.com/tiles/1.0.0/osm/" +
                         (tile.level.levelNumber + 1) + "/" + tile.column + "/" + tile.row + ".png";
-
                 }
             };
         };
