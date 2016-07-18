@@ -43,12 +43,27 @@ requirejs(['../src/WorldWind',
         });
 
 
-        var wmtsLayerCaps = new WorldWind.WmtsLayerCaps("eoc:world_relief_bw", "World relief", "image/png", "http://tiles.geoservice.dlr.de/service/wmts?", "default", "EPSG:4326", true,"EPSG:4326", {
-            topLeftCorner: [90, -180],
-            extent: [-180, -90, 180, 90],
-            resolutions: resolutions4326,
-            tileSize: 256
-        });
+            var matrixset = WorldWind.WmtsLayer.createTileMatrixSet(
+                {
+                        matrixSet : "EPSG:4326",
+                        prefix : true,
+                        projection : "EPSG:4326",
+                        topLeftCorner: [90, -180],
+                        extent: extent4326,
+                        resolutions: resolutions4326,
+                        tileSize: 256
+                }
+            );
+            var wmtsLayer = new WorldWind.WmtsLayer(
+                {
+                        identifier : "eoc:world_relief_bw",
+                        url : "https://tiles.geoservice.dlr.de/service/wmts?",
+                        format : "image/png",
+                        tileMatrixSet : matrixset,
+                        style : "default",
+                        title : "World Relief"
+                }
+            );
 
 
         $.get('http://mrdata.usgs.gov/mapcache/tms/1.0.0/', function(response) {
@@ -77,7 +92,7 @@ requirejs(['../src/WorldWind',
                 // Internal layer
                 var layers = [
                     {layer: new WorldWind.BMNGLandsatLayer(), enabled: false},
-                    {layer: new WorldWind.WmtsLayer(wmtsLayerCaps), enabled: true},
+                    {layer: wmtsLayer, enabled: true},
                     {layer: new WorldWind.TmsLayer(tmsLayer1, "akgeol"), enabled: false, selected : true},
                     {layer: new WorldWind.TmsLayer(tmsLayer2, "sim3340"), enabled: false, selected : true},
                     {layer: new WorldWind.TmsLayer(tmsLayer3, "alteration"), enabled: false, selected : true},
