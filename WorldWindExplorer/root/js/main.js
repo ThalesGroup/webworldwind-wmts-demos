@@ -94,6 +94,8 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
         var wwd = new WorldWind.WorldWindow("canvasOne");
         globe = new Globe(wwd, globeOptions);
 
+
+
         // Defined the Globe's layers and layer options
         // var blueMarble = new WorldWind.BMNGLayer();
         // blueMarble.info = "Native Web World Wind layer";
@@ -136,6 +138,28 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                                 var layer1 = new WorldWind.WmtsLayer(config1, "2016-06-08");
                                 layer1.displayName = "(WMTS) Wind Speed";
                                 layer1.info = "WMTS layer from GIBS representing the wind speed by day";
+                                layer1.doRender = function (dc) {
+                                    if (!dc.terrain)
+                                        return;
+
+                                    if (this.currentTilesInvalid
+                                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                                        this.currentTilesInvalid = false;
+                                        this.assembleTiles(dc);
+                                    }
+
+                                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                                    if (this.currentTiles.length > 0) {
+                                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                                        this.inCurrentFrame = true;
+                                    }
+
+                                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoNasa.png");
+                                };
                                 break;
 
                             // case "AMSR2_Columnar_Water_Vapor_Day" :
@@ -150,6 +174,29 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                                 var layer3 = new WorldWind.WmtsLayer(config3, "2016-06-08");
                                 layer3.displayName = "(WMTS) Blue Marble with Relief and Bathymetry";
                                 layer3.info = "WMTS layer from GIBS : Blue Marble";
+                                layer3.doRender = function (dc) {
+                                    if (!dc.terrain)
+                                        return;
+
+                                    if (this.currentTilesInvalid
+                                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                                        this.currentTilesInvalid = false;
+                                        this.assembleTiles(dc);
+                                    }
+
+                                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                                    if (this.currentTiles.length > 0) {
+                                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                                        this.inCurrentFrame = true;
+                                    }
+
+                                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoNasa.png");
+                                };
+                                // drawContext.screenCreditController.addImageCredit("../../images/esa.png");
                                 break;
 
                             // case "Coastlines" :
@@ -164,6 +211,28 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                                 var layer5 = new WorldWind.WmtsLayer(config5, "2016-06-08");
                                 layer5.displayName = "(WMTS) Sea Surface Temprature";
                                 layer5.info = "WMTS layer from GIBS representing the temperature on sea surface";
+                                layer5.doRender = function (dc) {
+                                    if (!dc.terrain)
+                                        return;
+
+                                    if (this.currentTilesInvalid
+                                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                                        this.currentTilesInvalid = false;
+                                        this.assembleTiles(dc);
+                                    }
+
+                                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                                    if (this.currentTiles.length > 0) {
+                                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                                        this.inCurrentFrame = true;
+                                    }
+
+                                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoNasa.png");
+                                };
                                 break;
 
                             case "MODIS_Terra_SurfaceReflectance_Bands143" :
@@ -171,6 +240,28 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                                 var layer6 = new WorldWind.WmtsLayer(config6, "2016-06-08");
                                 layer6.displayName = "(WMTS) Land Surface Reflectance";
                                 layer6.info = "WMTS layer from GIBS representing the reflectance on land surface";
+                                layer6.doRender = function (dc) {
+                                    if (!dc.terrain)
+                                        return;
+
+                                    if (this.currentTilesInvalid
+                                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                                        this.currentTilesInvalid = false;
+                                        this.assembleTiles(dc);
+                                    }
+
+                                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                                    if (this.currentTiles.length > 0) {
+                                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                                        this.inCurrentFrame = true;
+                                    }
+
+                                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoNasa.png");
+                                };
                                 break;
 
                             case "MODIS_Aqua_Chlorophyll_A" :
@@ -178,6 +269,28 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                                 var layer7 = new WorldWind.WmtsLayer(config7, "2016-06-08");
                                 layer7.displayName = "(WMTS) Chlorophyll";
                                 layer7.info = "WMTS layer from GIBS representing the chlorophyll amount on water";
+                                layer7.doRender = function (dc) {
+                                    if (!dc.terrain)
+                                        return;
+
+                                    if (this.currentTilesInvalid
+                                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                                        this.currentTilesInvalid = false;
+                                        this.assembleTiles(dc);
+                                    }
+
+                                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                                    if (this.currentTiles.length > 0) {
+                                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                                        this.inCurrentFrame = true;
+                                    }
+
+                                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoNasa.png");
+                                };
                                 break;
                         }
                     }
@@ -231,6 +344,28 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                     }
                 );
                 esa1.info = "WMTS layer from ESA Sentinel Hub representing burn area index. Very localized layer, so please zoom in to see real data ";
+                esa1.doRender = function (dc) {
+                    if (!dc.terrain)
+                        return;
+
+                    if (this.currentTilesInvalid
+                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                        this.currentTilesInvalid = false;
+                        this.assembleTiles(dc);
+                    }
+
+                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                    if (this.currentTiles.length > 0) {
+                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                        this.inCurrentFrame = true;
+                    }
+
+                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoEsa.png");
+                };
 
                 var esa2 = new WorldWind.WmtsLayer(
                     {
@@ -243,6 +378,28 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                     }
                 );
                 esa2.info = "WMTS layer from ESA Sentinel Hub representing the whole globe";
+                esa2.doRender = function (dc) {
+                    if (!dc.terrain)
+                        return;
+
+                    if (this.currentTilesInvalid
+                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                        this.currentTilesInvalid = false;
+                        this.assembleTiles(dc);
+                    }
+
+                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                    if (this.currentTiles.length > 0) {
+                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                        this.inCurrentFrame = true;
+                    }
+
+                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoEsa.png");
+                };
                 globe.layerManager.addBaseLayer(esa1, {enabled: false, detailHint: config.imageryDetailHint});
                 globe.layerManager.addBaseLayer(esa2, {enabled: false, detailHint: config.imageryDetailHint});
 
@@ -266,6 +423,10 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                     service: "http://mrdata.usgs.gov/mapcache/tms/1.0.0/"
                 }, "(TMS) Mineral Resources Data System");
                 tmsMrdsLayer.info = "TMS Layer from United States Geological Survey representing metallic and nonmetallic mineral resources throughout the world";
+                tmsMrdsLayer.doRender = function (dc) {
+                    WorldWind.TiledImageLayer.prototype.doRender.call(this, dc);
+                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoUsgs.png");
+                };
 
                 var tmsAkgeolLayer = new WorldWind.TmsLayer({
                     extent: [-180, -90, 180, 90],
@@ -279,6 +440,10 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                     service: "http://mrdata.usgs.gov/mapcache/tms/1.0.0/"
                 }, "(TMS) Alaska Geology");
                 tmsAkgeolLayer.info = "TMS Layer from United States Geological Survey representing Alaska Geology";
+                // tmsAkgeolLayer.doRender = function (dc) {
+                //     WorldWind.TiledImageLayer.prototype.doRender.call(this, dc);
+                //     dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoUsgs.png");
+                // };
 
                 globe.layerManager.addBaseLayer(tmsMrdsLayer, {enabled: false, detailHint: config.imageryDetailHint});
                 globe.layerManager.addBaseLayer(tmsAkgeolLayer, {enabled: false, detailHint: config.imageryDetailHint});

@@ -23,7 +23,7 @@ define([
         ThalesCredit.prototype.doRender = function (dc) {
             WorldWind.TiledImageLayer.prototype.doRender.call(this, dc);
             // dc.screenCreditController.imageCreditSize = 124;
-            dc.screenCreditController.imageCreditSize = 80;
+            // dc.screenCreditController.imageCreditSize = 80;
             dc.screenCreditController.opacity = 0.7;
             dc.screenCreditController.addImageCredit(this.creditImage);
         };
