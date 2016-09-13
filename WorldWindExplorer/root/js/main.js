@@ -440,10 +440,10 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                     service: "http://mrdata.usgs.gov/mapcache/tms/1.0.0/"
                 }, "(TMS) Alaska Geology");
                 tmsAkgeolLayer.info = "TMS Layer from United States Geological Survey representing Alaska Geology";
-                // tmsAkgeolLayer.doRender = function (dc) {
-                //     WorldWind.TiledImageLayer.prototype.doRender.call(this, dc);
-                //     dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoUsgs.png");
-                // };
+                tmsAkgeolLayer.doRender = function (dc) {
+                    WorldWind.TiledImageLayer.prototype.doRender.call(this, dc);
+                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoUsgs.png");
+                };
 
                 globe.layerManager.addBaseLayer(tmsMrdsLayer, {enabled: false, detailHint: config.imageryDetailHint});
                 globe.layerManager.addBaseLayer(tmsAkgeolLayer, {enabled: false, detailHint: config.imageryDetailHint});
