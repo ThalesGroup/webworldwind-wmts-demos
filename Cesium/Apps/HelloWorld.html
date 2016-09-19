@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Use correct character set. -->
+  <meta charset="utf-8">
+  <!-- Tell IE to use the latest, best version. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Performance issue : with label</title>
+  <script src="../Build/Cesium/Cesium.js"></script>
+  <style>
+      @import url(../Build/Cesium/Widgets/widgets.css);
+      html, body, #cesiumContainer {
+          width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+      }
+  </style>
+</head>
+<body>
+  <div id="cesiumContainer"></div>
+  <script>
+    var viewer = new Cesium.Viewer('cesiumContainer');
+
+    var centerOfScreen = new Cesium.Cartesian2(viewer.canvas.clientWidth / 2,
+            viewer.canvas.clientHeight / 2);
+    var surfacePosition = viewer.camera.pickEllipsoid(centerOfScreen);
+
+    var counter = 0;
+
+
+    // Define the images we'll use for the placemarks.
+    var images = [
+        "plain-black.png",
+        "plain-blue.png",
+        "plain-brown.png",
+        "plain-gray.png",
+        "plain-green.png",
+        "plain-orange.png",
+        "plain-purple.png",
+        "plain-red.png",
+        "plain-teal.png",
+        "plain-white.png",
+        "plain-yellow.png",
+        "castshadow-black.png",
+        "castshadow-blue.png",
+        "castshadow-brown.png",
+        "castshadow-gray.png",
+        "castshadow-green.png",
+        "castshadow-orange.png",
+        "castshadow-purple.png",
+        "castshadow-red.png",
+        "castshadow-teal.png",
+        "castshadow-white.png"
+    ];
+    surfacePosition.z = 0;
+    var latitude = 30.0608453,
+            longitude = -122.151208;
+
+    for (var j = 0; j < 80 ; j++ ) {
+        for (var i = 0, len = images.length; i < len; i++) {
+            if (Cesium.defined(surfacePosition)) {
+                var x = latitude + j*0.5;
+                var y = longitude + i*2.5;
+                var entity = viewer.entities.add({
+                    name: 'pin' + i,
+                    position: new Cesium.Cartesian3.fromDegrees(y,x,0),
+                    label: {
+                        text: 'pin' + j+i,
+                        verticalOrigin: Cesium.VerticalOrigin.TOP
+                    },
+                    billboard: {
+                        image: "./pushpins/" + images[i],
+                        verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+                    }
+                });
+            }
+        }
+    }
+
+    counter++;
+  </script>
+</body>
+</html>

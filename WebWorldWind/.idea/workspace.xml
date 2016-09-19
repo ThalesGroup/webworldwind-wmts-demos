@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/examples/Shapefiles.html" />
+    <bookmark url="file://$PROJECT_DIR$/src/layer/WmsLayer.js" line="78" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a3f5c5d-d66e-40ad-a528-552a1135f5b8" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/WebWorldWind_node_modules.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/codropsicons/codropsicons.eot" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/codropsicons/codropsicons.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/codropsicons/codropsicons.ttf" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/codropsicons/codropsicons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/codropsicons/codropsicons.woff" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/codropsicons/codropsicons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/nlicons.eot" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/nlicons.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/nlicons.ttf" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/nlicons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/nlicons.woff" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/nlicons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/100x100-color.jpg" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/100x100-color.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/NASA.png" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/NASA.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/NASATranLogo.jpg" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/NASATranLogo.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/globeSearch.png" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/globeSearch.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/load.png" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/load.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/loadingImage.gif" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/loadingImage.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/pin.png" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/pin.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/searchIcon.png" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/searchIcon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/castshadow-black.png" afterPath="$PROJECT_DIR$/images/pushpins/castshadow-black.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/castshadow-blue.png" afterPath="$PROJECT_DIR$/images/pushpins/castshadow-blue.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/castshadow-brown.png" afterPath="$PROJECT_DIR$/images/pushpins/castshadow-brown.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/castshadow-gray.png" afterPath="$PROJECT_DIR$/images/pushpins/castshadow-gray.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/castshadow-green.png" afterPath="$PROJECT_DIR$/images/pushpins/castshadow-green.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/castshadow-orange.png" afterPath="$PROJECT_DIR$/images/pushpins/castshadow-orange.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/castshadow-purple.png" afterPath="$PROJECT_DIR$/images/pushpins/castshadow-purple.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/castshadow-red.png" afterPath="$PROJECT_DIR$/images/pushpins/castshadow-red.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/castshadow-teal.png" afterPath="$PROJECT_DIR$/images/pushpins/castshadow-teal.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/castshadow-white.png" afterPath="$PROJECT_DIR$/images/pushpins/castshadow-white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/plain-black.png" afterPath="$PROJECT_DIR$/images/pushpins/plain-black.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/plain-blue.png" afterPath="$PROJECT_DIR$/images/pushpins/plain-blue.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/plain-brown.png" afterPath="$PROJECT_DIR$/images/pushpins/plain-brown.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/plain-gray.png" afterPath="$PROJECT_DIR$/images/pushpins/plain-gray.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/plain-green.png" afterPath="$PROJECT_DIR$/images/pushpins/plain-green.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/plain-orange.png" afterPath="$PROJECT_DIR$/images/pushpins/plain-orange.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/plain-purple.png" afterPath="$PROJECT_DIR$/images/pushpins/plain-purple.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/plain-red.png" afterPath="$PROJECT_DIR$/images/pushpins/plain-red.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/plain-teal.png" afterPath="$PROJECT_DIR$/images/pushpins/plain-teal.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/plain-white.png" afterPath="$PROJECT_DIR$/images/pushpins/plain-white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pushpins/plain-yellow.png" afterPath="$PROJECT_DIR$/images/pushpins/plain-yellow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/WebWorldWind.iml" afterPath="$PROJECT_DIR$/.idea/WebWorldWind.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebWorldWindDesignAndCodingGuidelines.html" afterPath="$PROJECT_DIR$/WebWorldWindDesignAndCodingGuidelines.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/README.md" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/blur.css" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/blur.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/blur.html" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/blur.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/css/component.css" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/css/component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/css/default.css" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/css/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/css/normalize.css" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/css/normalize.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/css/searchBox.css" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/css/searchBox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/css/style.css" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/dataPoint/config.rb" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/dataPoint/config.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/dataPoint/css/reset.css" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/dataPoint/css/reset.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/dataPoint/css/style.css" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/dataPoint/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/dataPoint/js/index.js" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/dataPoint/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/dataPoint/scss/style.scss" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/dataPoint/scss/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/codropsicons/codropsicons.svg" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/codropsicons/codropsicons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/codropsicons/license.txt" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/codropsicons/license.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/license.txt" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/license.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/nlicons.dev.svg" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/nlicons.dev.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/nlicons.svg" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/fonts/nlicons/nlicons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/windGear.svg" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/img/windGear.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/index.html" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/js/index.js" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/js/modernizr.custom.js" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/js/modernizr.custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/js/nlform.js" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/js/nlform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/NaturalLanguageForm/js/prefixfree.min.js" afterPath="$PROJECT_DIR$/apps/NaturalLanguageForm/js/prefixfree.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/PlacemarksAndPicking.js" afterPath="$PROJECT_DIR$/examples/PlacemarksAndPicking.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/WMTS.js" afterPath="$PROJECT_DIR$/examples/WMTS.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WorldWind.js" afterPath="$PROJECT_DIR$/src/WorldWind.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/libtess.js" afterPath="$PROJECT_DIR$/src/util/libtess.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/require.js" afterPath="$PROJECT_DIR$/thirdparty/require.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/almond.js" afterPath="$PROJECT_DIR$/tools/almond.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/wrap.end" afterPath="$PROJECT_DIR$/tools/wrap.end" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/wrap.start" afterPath="$PROJECT_DIR$/tools/wrap.start" />
+    </list>
+    <ignored path="WebWorldWind.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="WebWorldWind" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PlacemarksAndPicking.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlacemarksAndPicking.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="36" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlacemarksAndPicking_noLabel.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noLabel.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlacemarksAndPicking_noLabel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noLabel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlacemarksAndPicking_noHighlight.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlight.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-80">
+              <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlacemarksAndPicking_noHighlight.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlight.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlacemarksAndPicking_noHighlightnoLabel.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlightnoLabel.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlacemarksAndPicking_noHighlightnoLabel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlightnoLabel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Tag Library Descriptor" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="wms-c" />
+      </map>
+    </option>
+    <option name="RESET_MODE" value="KEEP" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/ogc/WmtsLayerCapabilities.js" />
+        <option value="$PROJECT_DIR$/src/ogc/WmtsCapabilities.js" />
+        <option value="$PROJECT_DIR$/examples/WMTS_Hardcoded.js" />
+        <option value="$PROJECT_DIR$/src/ogc/WmtsLayerCaps.js" />
+        <option value="$PROJECT_DIR$/apps/WMTS/WMTS_GIBS.js" />
+        <option value="$PROJECT_DIR$/src/ogc/TmsLayerCaps.js" />
+        <option value="$PROJECT_DIR$/src/layer/WmtsLayerTile.js" />
+        <option value="$PROJECT_DIR$/apps/WMTS/WMTS_Hardcoded.js" />
+        <option value="$PROJECT_DIR$/examples/TMS.html" />
+        <option value="$PROJECT_DIR$/src/layer/WmtsLayer.js" />
+        <option value="$PROJECT_DIR$/examples/wms-cGeoServer.xml" />
+        <option value="$PROJECT_DIR$/examples/wmscMapCache.xml" />
+        <option value="$PROJECT_DIR$/src/layer/WmscLayer.js" />
+        <option value="$PROJECT_DIR$/src/layer/TiledImageLayer.js" />
+        <option value="$PROJECT_DIR$/src/ogc/WmsCapabilities.js" />
+        <option value="$PROJECT_DIR$/src/util/Tile.js" />
+        <option value="$PROJECT_DIR$/src/util/WWMath.js" />
+        <option value="$PROJECT_DIR$/src/layer/WmsLayer.js" />
+        <option value="$PROJECT_DIR$/examples/TMS_Mrdata.js" />
+        <option value="$PROJECT_DIR$/src/layer/ThalesCredit.js" />
+        <option value="$PROJECT_DIR$/src/render/ScreenCreditController.js" />
+        <option value="$PROJECT_DIR$/src/WorldWind.js" />
+        <option value="$PROJECT_DIR$/src/layer/TmsLayer.js" />
+        <option value="$PROJECT_DIR$/src/ogc/TmsCapabilities.js" />
+        <option value="$PROJECT_DIR$/src/ogc/TmsLayerCapabilities.js" />
+        <option value="$PROJECT_DIR$/examples/TMS.css" />
+        <option value="$PROJECT_DIR$/examples/TMS.js" />
+        <option value="$PROJECT_DIR$/worldwindlib.js" />
+        <option value="$PROJECT_DIR$/examples/WMTS.js" />
+        <option value="$PROJECT_DIR$/examples/TMS_Mrdata.html" />
+        <option value="$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlightnoLabel.html" />
+        <option value="$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlight.html" />
+        <option value="$PROJECT_DIR$/examples/PlacemarksAndPicking_noLabel.html" />
+        <option value="$PROJECT_DIR$/examples/PlacemarksAndPicking.js" />
+        <option value="$PROJECT_DIR$/examples/PlacemarksAndPicking_noLabel.js" />
+        <option value="$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlight.js" />
+        <option value="$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlightnoLabel.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER">
+    <gruntfile path="$PROJECT_DIR$/Gruntfile.js" />
+  </component>
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thirdparty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cesium-1.25" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="197" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="204" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="210" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="982" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="200" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="207" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="214" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="985" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\geomatique\Desktop\WebWorldWind\examples" />
+      <recent name="$PROJECT_DIR$/thirdparty" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/examples" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Annotations">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="WebWorldWind" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <list size="40">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.AnalyticalSurface" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Annotations" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.Atmosphere" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.BasicExample" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.BingLayers" />
+      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.BlueMarbleTimeSeries" />
+      <item index="6" class="java.lang.String" itemvalue="JavaScript Debug.Configuration" />
+      <item index="7" class="java.lang.String" itemvalue="JavaScript Debug.CustomPlacemark" />
+      <item index="8" class="java.lang.String" itemvalue="JavaScript Debug.DeepPicking" />
+      <item index="9" class="java.lang.String" itemvalue="JavaScript Debug.DigitalGlobe" />
+      <item index="10" class="java.lang.String" itemvalue="JavaScript Debug.Explorer" />
+      <item index="11" class="java.lang.String" itemvalue="JavaScript Debug.GeoJSON" />
+      <item index="12" class="java.lang.String" itemvalue="JavaScript Debug.GeoTiffExample" />
+      <item index="13" class="java.lang.String" itemvalue="JavaScript Debug.GeographicMeshes" />
+      <item index="14" class="java.lang.String" itemvalue="JavaScript Debug.GeographicText" />
+      <item index="15" class="java.lang.String" itemvalue="JavaScript Debug.GoToLocation" />
+      <item index="16" class="java.lang.String" itemvalue="JavaScript Debug.KmlExample" />
+      <item index="17" class="java.lang.String" itemvalue="JavaScript Debug.LibraryExample" />
+      <item index="18" class="java.lang.String" itemvalue="JavaScript Debug.NEO" />
+      <item index="19" class="java.lang.String" itemvalue="JavaScript Debug.OpenStreetMap" />
+      <item index="20" class="java.lang.String" itemvalue="JavaScript Debug.ParseUrlArguments" />
+      <item index="21" class="java.lang.String" itemvalue="JavaScript Debug.Paths" />
+      <item index="22" class="java.lang.String" itemvalue="JavaScript Debug.PickAllShapesInRegion" />
+      <item index="23" class="java.lang.String" itemvalue="JavaScript Debug.PlacemarksAndPicking" />
+      <item index="24" class="java.lang.String" itemvalue="JavaScript Debug.Polygons" />
+      <item index="25" class="java.lang.String" itemvalue="JavaScript Debug.RefreshImagery" />
+      <item index="26" class="java.lang.String" itemvalue="JavaScript Debug.ScreenImage" />
+      <item index="27" class="java.lang.String" itemvalue="JavaScript Debug.ScreenText" />
+      <item index="28" class="java.lang.String" itemvalue="JavaScript Debug.Shapefiles" />
+      <item index="29" class="java.lang.String" itemvalue="JavaScript Debug.SimplestExample" />
+      <item index="30" class="java.lang.String" itemvalue="JavaScript Debug.Standalone" />
+      <item index="31" class="java.lang.String" itemvalue="JavaScript Debug.SubSurface" />
+      <item index="32" class="java.lang.String" itemvalue="JavaScript Debug.SurfaceImage" />
+      <item index="33" class="java.lang.String" itemvalue="JavaScript Debug.SurfaceShapes" />
+      <item index="34" class="java.lang.String" itemvalue="JavaScript Debug.TriangleMeshes" />
+      <item index="35" class="java.lang.String" itemvalue="JavaScript Debug.USGSSlabs" />
+      <item index="36" class="java.lang.String" itemvalue="JavaScript Debug.USGSWells.html" />
+      <item index="37" class="java.lang.String" itemvalue="JavaScript Debug.VeryManyPaths" />
+      <item index="38" class="java.lang.String" itemvalue="JavaScript Debug.VeryManyPolygons" />
+      <item index="39" class="java.lang.String" itemvalue="JavaScript Debug.WmsExplorer" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a3f5c5d-d66e-40ad-a528-552a1135f5b8" name="Default" comment="" />
+      <created>1467274017888</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1467274017888</updated>
+      <workItem from="1467274019167" duration="4181000" />
+      <workItem from="1467357479403" duration="1216000" />
+      <workItem from="1467622463990" duration="5126000" />
+      <workItem from="1467722536670" duration="7174000" />
+      <workItem from="1467789093492" duration="6483000" />
+      <workItem from="1467875285415" duration="4099000" />
+      <workItem from="1467901597678" duration="561000" />
+      <workItem from="1467957169008" duration="3981000" />
+      <workItem from="1467970773937" duration="1461000" />
+      <workItem from="1468247855731" duration="513000" />
+      <workItem from="1468317345777" duration="3398000" />
+      <workItem from="1468393309750" duration="84000" />
+      <workItem from="1468394375293" duration="107000" />
+      <workItem from="1468394577362" duration="462000" />
+      <workItem from="1468395111512" duration="33000" />
+      <workItem from="1468395430259" duration="30000" />
+      <workItem from="1468395509185" duration="119000" />
+      <workItem from="1468395813062" duration="3000" />
+      <workItem from="1468395975877" duration="5605000" />
+      <workItem from="1468822433037" duration="15685000" />
+      <workItem from="1468912107667" duration="5379000" />
+      <workItem from="1468936878896" duration="3095000" />
+      <workItem from="1468994724756" duration="15604000" />
+      <workItem from="1469081243922" duration="9108000" />
+      <workItem from="1469170172082" duration="8375000" />
+      <workItem from="1469429736253" duration="599000" />
+      <workItem from="1469603067971" duration="4565000" />
+      <workItem from="1469608494181" duration="9239000" />
+      <workItem from="1469689257311" duration="973000" />
+      <workItem from="1469775777038" duration="2081000" />
+      <workItem from="1470037036236" duration="16118000" />
+      <workItem from="1470122712864" duration="14009000" />
+      <workItem from="1470207423813" duration="45000" />
+      <workItem from="1470207526593" duration="14000" />
+      <workItem from="1470207582994" duration="33000" />
+      <workItem from="1470207642651" duration="32000" />
+      <workItem from="1470207709920" duration="28000" />
+      <workItem from="1470207776526" duration="9000" />
+      <workItem from="1470207810382" duration="13000" />
+      <workItem from="1470207842562" duration="44000" />
+      <workItem from="1470207921126" duration="7363000" />
+      <workItem from="1470294625149" duration="1196000" />
+      <workItem from="1470640510900" duration="2177000" />
+      <workItem from="1470900004713" duration="27000" />
+      <workItem from="1470904167222" duration="7000" />
+      <workItem from="1470991103952" duration="46000" />
+      <workItem from="1471013547569" duration="39000" />
+      <workItem from="1471511654529" duration="30000" />
+      <workItem from="1471511773730" duration="645000" />
+      <workItem from="1472026229784" duration="88000" />
+      <workItem from="1472475666178" duration="3230000" />
+      <workItem from="1473068069277" duration="757000" />
+      <workItem from="1473147593444" duration="9100000" />
+      <workItem from="1473240835672" duration="7878000" />
+      <workItem from="1473322503587" duration="1842000" />
+      <workItem from="1473325958503" duration="19000" />
+      <workItem from="1473326360999" duration="592000" />
+      <workItem from="1473687159504" duration="723000" />
+      <workItem from="1473693333746" duration="9000" />
+      <workItem from="1473761803235" duration="1052000" />
+      <workItem from="1473764560212" duration="57000" />
+      <workItem from="1474013859805" duration="5733000" />
+      <workItem from="1474272122960" duration="4130000" />
+    </task>
+    <task id="LOCAL-00001" summary="Change matrixset name in WMTS.js example">
+      <created>1468936379344</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1468936379344</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Construct TMS layer in the same way as WMS or WMTS :&#10;- config object (can create layer on the fly)&#10;- formLayerConfiguration method&#10;- no need for TmsLayerCaps anymore&#10;&#10;Todo : TmsLayerCapabilities">
+      <created>1469000596597</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1469000596597</updated>
+    </task>
+    <task id="LOCAL-00003" summary="New WMS-C branch">
+      <created>1469605356812</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1469605356812</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixing incorrect commit on master branch">
+      <created>1469605604556</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1469605604556</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix bug">
+      <created>1470038634203</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1470038634203</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix bug">
+      <created>1470212535185</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1470212535185</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="196466000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.284153" sideWeight="0.502442" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26994535" sideWeight="0.497558" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18045112" sideWeight="0.4909091" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24908425" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21789883" sideWeight="0.5090909" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7332589" sideWeight="0.502442" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24908425" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6629464" sideWeight="0.497558" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.082417585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.configurationType" implementationName="JsTestDriver-test-runner" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change matrixset name in WMTS.js example" />
+    <MESSAGE value="Construct TMS layer in the same way as WMS or WMTS :&#10;- config object (can create layer on the fly)&#10;- formLayerConfiguration method&#10;- no need for TmsLayerCaps anymore&#10;&#10;Todo : TmsLayerCapabilities" />
+    <MESSAGE value="New WMS-C branch" />
+    <MESSAGE value="Fixing incorrect commit on master branch" />
+    <MESSAGE value="fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/examples/wms-cGeoServer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="124" selection-start-line="24" selection-start-column="124" selection-end-line="24" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/BMNGLandsatLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/wmscMapCache.xml" />
+    <entry file="file://$PROJECT_DIR$/GruntSetup.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/WmscLayer.js" />
+    <entry file="file://$PROJECT_DIR$/src/geom/Sector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/LevelSet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="110" column="29" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/WWUtil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/WWMath.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11550">
+          <caret line="773" column="0" selection-start-line="773" selection-start-column="0" selection-end-line="773" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Tile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7980">
+          <caret line="535" column="0" selection-start-line="535" selection-start-column="0" selection-end-line="535" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/WmsUrlBuilder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ogc/WmsLayerCapabilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ogc/WmsCapabilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/MercatorTiledImageLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/BingAerialLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/TiledImageLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2879">
+          <caret line="320" column="76" selection-start-line="320" selection-start-column="76" selection-end-line="320" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/WmsLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-151">
+          <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/powered-by-bing.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/render/ScreenCreditController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-806">
+          <caret line="139" column="93" selection-start-line="139" selection-start-column="93" selection-end-line="139" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-495">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/ThalesCredit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/WmtsLayerTile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="68" column="40" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thirdparty/require.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thirdparty/r.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ogc/TmsCapabilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ogc/TmsLayerCapabilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/TMS.css" />
+    <entry file="file://$PROJECT_DIR$/src/util/jszip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="3860" column="2" selection-start-line="3860" selection-start-column="2" selection-end-line="3860" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/WMTS.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="115" selection-start-line="10" selection-start-column="115" selection-end-line="10" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/TMS_Mrdata.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorldWind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8778">
+          <caret line="402" column="17" selection-start-line="402" selection-start-column="14" selection-end-line="402" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/TMS_Mrdata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2750">
+          <caret line="128" column="57" selection-start-line="128" selection-start-column="57" selection-end-line="128" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/worldwindlib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2002">
+          <caret line="95" column="1040" selection-start-line="95" selection-start-column="1034" selection-end-line="95" selection-end-column="1040" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/TMS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1364">
+          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/WMTS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/BingWMSLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/BingAerialWithLabelsLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/BingTiledImageLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1452">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/WmtsLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11264">
+          <caret line="515" column="13" selection-start-line="498" selection-start-column="12" selection-end-line="515" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/WMTS/WMTS_Hardcoded.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layer/TmsLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noLabel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlightnoLabel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noLabel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlight.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/PlacemarksAndPicking_noHighlightnoLabel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
