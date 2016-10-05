@@ -1,0 +1,85 @@
+.page_header {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: large;
+}
+
+/* http://www.jqueryscript.net/menu/jQuery-Plugin-To-Create-App-style-Revealing-Sidebars-Sidebar-js.html
+   http://www.jqueryscript.net/demo/jQuery-Plugin-To-Create-App-style-Revealing-Sidebars-Sidebar-js/css/sidebar.min.css */
+* {
+    margin: 0;
+    padding: 0;
+    font: 1em/1 'Open Sans', sans-serif;
+}
+
+body {
+    background: #fff;
+    padding: 5px;
+    color: #333
+}
+
+.main {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: calc(100vh - 50px);
+    margin: 0 auto;
+    text-align: center
+}
+
+.sidebar {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9990;
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.15);
+    transform: translateX(-120%);
+    transition: all 0.3s cubic-bezier(0.35, 0.38, 0.07, 0.83);
+    overflow: auto
+}
+
+.sidebar .close .btn-close {
+    background: #cf2828;
+    float: right;
+    box-shadow: none
+}
+
+.sidebar .close::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden
+}
+
+.sidebar.right {
+    left: initial;
+    right: 0;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    transform: translateX(120%)
+}
+
+.sidebar.right .close .btn-close {
+    float: left
+}
+
+.sidebar.active {
+    transform: translateX(0)
+}
+
+.sidebar .content {
+    padding: 10px
+}
+
+.sidebar .content {
+    line-height: 1.5;
+    font-size: 0.875em
+}
+
+.sidebar .content ul, .sidebar .content ol {
+    margin: 20px 0 20px 20px
+}
