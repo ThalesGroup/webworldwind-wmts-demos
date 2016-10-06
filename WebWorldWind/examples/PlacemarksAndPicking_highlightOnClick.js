@@ -147,8 +147,6 @@ requirejs(['../src/WorldWind',
         // Add the placemarks layer to the World Window's layer list.
         wwd.addLayer(placemarkLayer);
 
-        wwd.highlight
-
         // Create a layer manager for controlling layer visibility.
         var layerManger = new LayerManager(wwd);
 
