@@ -1,80 +1,59 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--NOTE: Most Web World Wind examples use jquery, Bootstrap and requirejs but those technologies are NOT-->
+    <!--required by Web World Wind. See SimplestExample.html for an example of using Web World Wind without them.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
 <body>
 <div id="logoDiv" align="center">
-    <img alt="Thales" src="Thales_logo.jpg"/>
+    <img alt="Thales" src="images/Thales_logo.jpg"/>
 </div>
 <div id="menuDiv" align="center">
-    <h2>WebWorldWind demos</h2>
-    <p>Here are available demos:
-    </p>
-    <p>
 
-        <a href="./WorldWindExplorer/root/index.html">World Wind Explorer</a><br/>
-
-        <br/>
-        **************************************************************************************************
-    <h3>Performance issue</h3>
-    <a href="./WebWorldWind/examples/PlacemarksAndPicking_highlightOnClick.html">World Wind : on-click
-        highlighting</a><br/><br/>
-
-    <a href="./WebWorldWind/examples/PlacemarksAndPicking.html">World Wind : continuous highlighting /
-        label </a><br/><br/>
-    <a href="./WebWorldWind/examples/PlacemarksAndPicking_noLabel.html">World Wind : continuous highlighting / no
-        label </a><br/><br/>
-    <a href="./WebWorldWind/examples/PlacemarksAndPicking_noHighlight.html">World Wind : no continuous highlighting /
-        label </a><br/><br/>
-    <a href="./WebWorldWind/examples/PlacemarksAndPicking_noHighlightnoLabel.html">World Wind : no continuous
-        highlighting / no label </a><br/><br/>
-
-    <a href="./Cesium/Apps/HelloWorld.html">Cesium : label </a><br/><br/>
-    <a href="./Cesium/Apps/HelloWorld_noLabel.html">Cesium : no label </a><br/><br/>
-    **************************************************************************************************
-    <br/>
-    <a href="./WWD/apps/WMTS/WMTS_GIBS.html">WMTS NASA GIBS example (mercator projection)</a><br/>
-    Data from : <a href="https://wiki.earthdata.nasa.gov/display/GIBS/GIBS+API+for+Developers">NASA's Global Imagery
-    Browse Services (GIBS)</a><br/>
-
+    <h4>NASA WebWorldWind demos</h4>
+    <p>Examples of the WMTS and TMS layers using the WorldWind Explorer:</p>
+    <div style="padding:1px"><a href="./WorldWindExplorer/root/index.html" class="btn btn-primary" type="button">World Wind Explorer</a></div>
     <br/>
 
-    <a href="./WWD/apps/WMTS/WMTS_ESA.html">WMTS Sentinel Hub example</a><br/>
-    Data from : <a href="http://www.sentinel-hub.com/">Sentinel Hub</a><br/>
-
+    <h4>WMTS/TMS layers examples</h4>
+    <p>Demonstrators of WMTS/TMS layers using NASA GIBS and ESA's Sentinel data:</p>
+    <a href="./WWD/apps/WMTS/WMTS_GIBS.html" class="btn btn-primary" type="button">WMTS NASA GIBS example (mercator projection)</a><br/>
+    Source: <a href="https://wiki.earthdata.nasa.gov/display/GIBS/GIBS+API+for+Developers">NASA's Global Imagery Browse Services (GIBS)</a><br/>
+    <a href="./WWD/apps/WMTS/WMTS_ESA.html" class="btn btn-primary" type="button">WMTS Sentinel Hub example</a><br/>
+    Source: <a href="http://www.sentinel-hub.com/">Sentinel Hub</a><br/>
+    <a href="./WWD/examples/TMS_Mrdata.html" class="btn btn-primary" type="button">TMS Mineral Resources Data example</a><br/>
+    Source: <a href="http://mrdata.usgs.gov/">Mineral Resources On-Line Spatial Data</a><br>
     <br/>
 
-    <a href="./WWD/examples/TMS_Mrdata.html">TMS Mineral Resources Data example</a><br/>
-    Data from : <a href="http://mrdata.usgs.gov/">Mineral Resources On-Line Spatial Data</a><br/>
+    <h4>Additional WMTS layers examples</h4>
+    <a href="./WWD/apps/WMTS/WMTS_GeoService.html" class="btn btn-primary" type="button">WMTS EOC Geoservice example</a><br/>
+    Source: <a href="https://geoservice.dlr.de/web/services">The EOC Geoservice of the Earth Observation Center (EOC) of the German Aerospace Center (DLR) </a><br/>
+    <a href="./WWD/apps/WMTS/WMTS_ESRI.html" class="btn btn-primary" type="button">WMTS ESRI ArcGIS Online example</a><br/>
+    Source: <a href="http://basemap.nationalmap.gov/arcgis/rest/services/"> ESRI ArcGIS Online</a><br/>
+    <a href="./WWD/apps/WMTS/WMTS_SpanishIGN.html" class="btn btn-primary" type="button">WMTS Spanish IGN example</a><br/>
+    Source: <a href="http://www.ign.es/ign/main/index.do"> Spanish IGN website</a><br/>
+    <a href="./WWD/apps/WMTS/WMTS_Hardcoded.html" class="btn btn-primary" type="button">WMTS with fixed-parameters layers</a><br/>
+    Source: GIBS, Geoservice and ArcGIS Online</a><br/>
+    <br/>
+
+    <h4>Performances/Stress tests</h4>
+    <p>Comparison of different ways to display Placemarks and analyze impact on performances:</p>
+    <div style="padding:2px"><a href="./WebWorldWind/examples/PlacemarksAndPicking_highlightOnClick.html" class="btn btn-primary" type="button">World Wind : on-click highlighting</a></div>
+    <div style="padding:2px"><a href="./WebWorldWind/examples/PlacemarksAndPicking.html" class="btn btn-primary" type="button">World Wind : continuous highlighting / label</a></div>
+    <div style="padding:2px"><a href="./WebWorldWind/examples/PlacemarksAndPicking_noLabel.html" class="btn btn-primary" type="button">World Wind : continuous highlighting / no label</a></div>
+    <div style="padding:2px"><a href="./WebWorldWind/examples/PlacemarksAndPicking_noHighlight.html" class="btn btn-primary" type="button">World Wind : no continuous highlighting / label</a></div>
+    <div style="padding:2px"><a href="./WebWorldWind/examples/PlacemarksAndPicking_noHighlightnoLabel.html" class="btn btn-primary" type="button">World Wind : no continuous highlighting / no label</a></div>
+    <div style="padding:2px"><a href="./Cesium/Apps/HelloWorld.html" class="btn btn-primary" type="button">Cesium Placemarks: label </a></div>
+    <div style="padding:2px"><a href="./Cesium/Apps/HelloWorld_noLabel.html" class="btn btn-primary" type="button">Cesium Placemarks: no label </a></div>
+    <br>
 
     <br/>
     <br/>
-
-    <h4>Others examples</h4>
-
-
-    <a href="./WWD/apps/WMTS/WMTS_GeoService.html">WMTS EOC Geoservice example</a><br/>
-    Data from : <a href="https://geoservice.dlr.de/web/services">The EOC Geoservice of the Earth Observation Center
-    (EOC) of the German Aerospace Center (DLR) </a><br/>
-
-    <br/>
-
-    <a href="./WWD/apps/WMTS/WMTS_ESRI.html">WMTS ESRI ArcGIS Online example</a><br/>
-    Data from : <a href="http://basemap.nationalmap.gov/arcgis/rest/services/"> ESRI ArcGIS Online</a><br/>
-
-    <br/>
-
-    <a href="./WWD/apps/WMTS/WMTS_SpanishIGN.html">WMTS Spanish IGN example</a><br/>
-    Data from : <a href="http://www.ign.es/ign/main/index.do"> Spanish IGN website</a><br/>
-
-
-    <br/>
-    <a href="./WWD/apps/WMTS/WMTS_Hardcoded.html">WMTS with hardcoded layers</a><br/>
-    Data from GIBS, Geoservice and ArcGIS Online</a><br/>
-
-    </p>
-    <br/>
-    <br/>
-    <p>
-        *(c) Thales 2016
-    </p>
+    <p>&copy; Thales 2016</p>
 </div>
 </body>
 </html>
