@@ -74,7 +74,6 @@
         <ows:Identifier>TileLayer.encodeDimensionValue(defStyle)</ows:Identifier>
       </Style>
       <Format>image/jpeg</Format>
-      <Format>application/vnd.google-earth.kml+xml</Format>
       <TileMatrixSetLink>
         <TileMatrixSet>EPSG_4326</TileMatrixSet>
       </TileMatrixSetLink>
@@ -84,7 +83,7 @@
       <ows:Identifier>EPSG_4326</ows:Identifier>
       <ows:SupportedCRS>urn:ogc:def:crs:EPSG::4326</ows:SupportedCRS>
       <TileMatrix>
-        <ows:Identifier>EPSG_4326_0</ows:Identifier>
+        <ows:Identifier>0</ows:Identifier>
         <ScaleDenominator>139770566.007179</ScaleDenominator>
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
@@ -93,7 +92,7 @@
         <MatrixHeight>1</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
-        <ows:Identifier>EPSG_4326_1</ows:Identifier>
+        <ows:Identifier>1</ows:Identifier>
         <ScaleDenominator>93180377.3381196</ScaleDenominator>
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
@@ -102,7 +101,7 @@
         <MatrixHeight>2</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
-        <ows:Identifier>EPSG_4326_2</ows:Identifier>
+        <ows:Identifier>2</ows:Identifier>
         <ScaleDenominator>55908226.4028718</ScaleDenominator>
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
@@ -111,7 +110,7 @@
         <MatrixHeight>4</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
-        <ows:Identifier>EPSG_4326_3</ows:Identifier>
+        <ows:Identifier>3</ows:Identifier>
         <ScaleDenominator>31060125.7793732</ScaleDenominator>
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
@@ -120,7 +119,7 @@
         <MatrixHeight>8</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
-        <ows:Identifier>EPSG_4326_4</ows:Identifier>
+        <ows:Identifier>4</ows:Identifier>
         <ScaleDenominator>16443596.0008446</ScaleDenominator>
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
@@ -129,7 +128,7 @@
         <MatrixHeight>16</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
-        <ows:Identifier>EPSG_4326_5</ows:Identifier>
+        <ows:Identifier>5</ows:Identifier>
         <ScaleDenominator>8470943.39437451</ScaleDenominator>
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
