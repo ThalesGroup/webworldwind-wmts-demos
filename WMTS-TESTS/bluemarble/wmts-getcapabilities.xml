@@ -88,8 +88,8 @@
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
-        <MatrixWidth>2</MatrixWidth>
-        <MatrixHeight>1</MatrixHeight>
+        <MatrixWidth>4</MatrixWidth>
+        <MatrixHeight>2</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
         <ows:Identifier>1</ows:Identifier>
@@ -97,8 +97,8 @@
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
-        <MatrixWidth>4</MatrixWidth>
-        <MatrixHeight>2</MatrixHeight>
+        <MatrixWidth>6</MatrixWidth>
+        <MatrixHeight>3</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
         <ows:Identifier>2</ows:Identifier>
@@ -106,8 +106,8 @@
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
-        <MatrixWidth>8</MatrixWidth>
-        <MatrixHeight>4</MatrixHeight>
+        <MatrixWidth>10</MatrixWidth>
+        <MatrixHeight>5</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
         <ows:Identifier>3</ows:Identifier>
@@ -115,8 +115,8 @@
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
-        <MatrixWidth>16</MatrixWidth>
-        <MatrixHeight>8</MatrixHeight>
+        <MatrixWidth>18</MatrixWidth>
+        <MatrixHeight>9</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
         <ows:Identifier>4</ows:Identifier>
@@ -124,8 +124,8 @@
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
-        <MatrixWidth>32</MatrixWidth>
-        <MatrixHeight>16</MatrixHeight>
+        <MatrixWidth>34</MatrixWidth>
+        <MatrixHeight>17</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
         <ows:Identifier>5</ows:Identifier>
@@ -133,8 +133,8 @@
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
-        <MatrixWidth>64</MatrixWidth>
-        <MatrixHeight>32</MatrixHeight>
+        <MatrixWidth>66</MatrixWidth>
+        <MatrixHeight>33</MatrixHeight>
       </TileMatrix>
     </TileMatrixSet>
   </Contents>
