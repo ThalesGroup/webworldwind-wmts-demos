@@ -32,9 +32,13 @@ requirejs(['../../src/WorldWind',
         })
             .done(function () {
 
+                var wmtsLayer = new WorldWind.WmtsLayer(WorldWind.WmtsLayer.formLayerConfiguration(wmtsCapabilitiesGeoService1))
+                wmtsLayer.opacity = 0.7;
+
                 var layers = [
                     // WMTS layers
-                    {layer: new WorldWind.WmtsLayer(WorldWind.WmtsLayer.formLayerConfiguration(wmtsCapabilitiesGeoService1)), enabled: true},
+
+                    {layer: wmtsLayer, enabled: true},
 
                     // Internal layers
                     {layer: new WorldWind.CompassLayer(), enabled: true},
