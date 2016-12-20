@@ -21,7 +21,7 @@ requirejs(['../../src/WorldWind',
         // NOAA layers
         var wmtsCapabilitiesGeoService1;
 
-        $.get('http://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble/wmts-getcapabilities.xml', function (response) {
+        $.get('https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble/wmts-getcapabilities.xml', function (response) {
 
             var wmtsCapabilities = new WorldWind.WmtsCapabilities(response);
             wmtsCapabilitiesGeoService1 = wmtsCapabilities.contents.layer[0];

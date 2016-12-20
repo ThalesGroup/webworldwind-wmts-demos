@@ -24,10 +24,10 @@
     <ows:Operation name="GetCapabilities">
       <ows:DCP>
         <ows:HTTP>
-          <ows:Get xlink:href="http://tiles.geoservice.dlr.de/service/wmts?">
+          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble/wmts-getcapabilities.xml">
             <ows:Constraint name="GetEncoding">
               <ows:AllowedValues>
-                <ows:Value>KVP</ows:Value>
+                <ows:Value>RESTful</ows:Value>
               </ows:AllowedValues>
             </ows:Constraint>
           </ows:Get>
@@ -37,10 +37,10 @@
     <ows:Operation name="GetTile">
       <ows:DCP>
         <ows:HTTP>
-          <ows:Get xlink:href="http://tiles.geoservice.dlr.de/service/wmts?">
+          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble/wmts-getcapabilities.xml">
             <ows:Constraint name="GetEncoding">
               <ows:AllowedValues>
-                <ows:Value>KVP</ows:Value>
+                <ows:Value>RESTful</ows:Value>
               </ows:AllowedValues>
             </ows:Constraint>
           </ows:Get>
@@ -50,10 +50,10 @@
     <ows:Operation name="GetFeatureInfo">
       <ows:DCP>
         <ows:HTTP>
-          <ows:Get xlink:href="http://tiles.geoservice.dlr.de/service/wmts?">
+          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble/wmts-getcapabilities.xml">
             <ows:Constraint name="GetEncoding">
               <ows:AllowedValues>
-                <ows:Value>KVP</ows:Value>
+                <ows:Value>RESTful</ows:Value>
               </ows:AllowedValues>
             </ows:Constraint>
           </ows:Get>
