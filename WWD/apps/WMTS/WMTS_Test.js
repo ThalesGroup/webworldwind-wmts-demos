@@ -26,6 +26,9 @@ requirejs(['../../src/WorldWind',
             var wmtsCapabilities = new WorldWind.WmtsCapabilities(response);
             wmtsCapabilitiesGeoService1 = wmtsCapabilities.contents.layer[0];
 
+            console.log(wmtsCapabilities);
+            console.log(wmtsCapabilitiesGeoService1);
+
         })
             .done(function () {
 

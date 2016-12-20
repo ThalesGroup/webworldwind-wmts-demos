@@ -73,7 +73,7 @@
       <Style isDefault="true">
         <ows:Identifier>TileLayer.encodeDimensionValue(defStyle)</ows:Identifier>
       </Style>
-      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
       <Format>application/vnd.google-earth.kml+xml</Format>
       <TileMatrixSetLink>
         <TileMatrixSet>EPSG_4326</TileMatrixSet>
