@@ -77,7 +77,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>EPSG_4326</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/jpeg" resourceType="tile" template="http://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg"/>
+      <ResourceURL format="image/jpeg" resourceType="tile" template="http://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble/{TileMatrixSet}/{TileMatrix}/{TileCol}/{TileRow}.jpg"/>
     </Layer>
     <TileMatrixSet>
       <ows:Identifier>EPSG_4326</ows:Identifier>
