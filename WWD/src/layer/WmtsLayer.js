@@ -47,7 +47,7 @@ define([
          * properties:
          * <ul>
          *     <li>identifier: {String} The layer name.</li>
-         *     <li>url: {String} The URL of the WMTS server</li>
+         *     <li>service: {String} The URL of the WMTS server</li>
          *     <li>format: {String} The mime type of the image format to request, e.g., image/png.</li>
          *     <li>tileMatrixSet: {{}} The tile matrix set to use for this layer.</li>
          *     <li>style: {String} The style to use for this layer.</li>
@@ -100,7 +100,7 @@ define([
              * @readonly
              */
             this.resourceUrl = config.resourceUrl;
-            this.serviceUrl = config.url;
+            this.serviceUrl = config.service;
 
             /**
              * The tileMatrixSet specified to this layer's constructor.
@@ -137,13 +137,13 @@ define([
                     config.wgs84BoundingBox.lowerCorner[0],
                     config.wgs84BoundingBox.upperCorner[0]);
             } else if (this.tileMatrixSet.boundingBox &&
-                WmtsLayerCapabilities.isEpsg4326Crs(this.tileMatrixSet.boundingBox.crs)) {
+                WmtsLayer.isEpsg4326Crs(this.tileMatrixSet.boundingBox.crs)) {
                 this.sector = new Sector(
                     this.tileMatrixSet.boundingBox.lowerCorner[1],
                     this.tileMatrixSet.boundingBox.upperCorner[1],
                     this.tileMatrixSet.boundingBox.lowerCorner[0],
                     this.tileMatrixSet.boundingBox.upperCorner[0]);
-            } else if (WmtsLayerCapabilities.isEpsg4326Crs(this.tileMatrixSet.supportedCRS)) {
+            } else if (WmtsLayer.isEpsg4326Crs(this.tileMatrixSet.supportedCRS)) {
 
                 // Throw an exception if there is no 4326 bounding box.
                 throw new ArgumentError(
@@ -386,14 +386,14 @@ define([
                     }
                 }
             } else { // resource-oriented interface not supported, so use KVP interface
-                config.url = wmtsLayerCapabilities.capabilities.getGetTileKvpAddress();
+                config.service = wmtsLayerCapabilities.capabilities.getGetTileKvpAddress();
 
-                if (config.url) {
-                    config.url = WmsUrlBuilder.fixGetMapString(config.url);
+                if (config.service) {
+                    config.service = WmsUrlBuilder.fixGetMapString(config.service);
                 }
             }
 
-            if (!config.resourceUrl && !config.url) {
+            if (!config.resourceUrl && !config.service) {
                 throw new ArgumentError(
                     Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "formLayerConfiguration",
                         "No resource URL or KVP GetTile service URL specified in WMTS capabilities."));
@@ -488,7 +488,7 @@ define([
                 config.title = wmtsLayerCapabilities.identifier;
             }
 
-            
+
             return config;
         };
 
@@ -549,20 +549,6 @@ define([
         };
 
         WmtsLayer.prototype.addTileOrDescendants = function (dc, tile) {
-            // TODO (Nicolas): is it the best place for these tests?
-            if (tile.column >= tile.tileMatrix.matrixWidth) {
-                tile.column = tile.column - tile.tileMatrix.matrixWidth;
-            }
-            if (tile.column < 0) {
-                tile.column = tile.column + tile.tileMatrix.matrixWidth;
-            }
-            if (tile.row >= tile.tileMatrix.matrixHeight) {
-                tile.row = tile.row - tile.tileMatrix.matrixHeight;
-            }
-            if (tile.row < 0) {
-                tile.row = tile.row + tile.tileMatrix.matrixHeight;
-            }
-
             if (this.tileMeetsRenderingCriteria(dc, tile)) {
                 this.addTile(dc, tile);
                 return;
