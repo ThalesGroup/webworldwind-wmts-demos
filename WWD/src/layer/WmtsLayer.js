@@ -549,6 +549,20 @@ define([
         };
 
         WmtsLayer.prototype.addTileOrDescendants = function (dc, tile) {
+            // TODO (Nicolas): is it the best place for these tests?
+            if (tile.column >= tile.tileMatrix.matrixWidth) {
+                tile.column = tile.column - tile.tileMatrix.matrixWidth;
+            }
+            if (tile.column < 0) {
+                tile.column = tile.column + tile.tileMatrix.matrixWidth;
+            }
+            if (tile.row >= tile.tileMatrix.matrixHeight) {
+                tile.row = tile.row - tile.tileMatrix.matrixHeight;
+            }
+            if (tile.row < 0) {
+                tile.row = tile.row + tile.tileMatrix.matrixHeight;
+            }
+
             if (this.tileMeetsRenderingCriteria(dc, tile)) {
                 this.addTile(dc, tile);
                 return;
