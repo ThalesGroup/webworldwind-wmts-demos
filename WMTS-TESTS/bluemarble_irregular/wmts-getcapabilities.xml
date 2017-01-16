@@ -24,7 +24,7 @@
     <ows:Operation name="GetCapabilities">
       <ows:DCP>
         <ows:HTTP>
-          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble/wmts-getcapabilities.xml">
+          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_irregular/wmts-getcapabilities.xml">
             <ows:Constraint name="GetEncoding">
               <ows:AllowedValues>
                 <ows:Value>RESTful</ows:Value>
@@ -37,7 +37,7 @@
     <ows:Operation name="GetTile">
       <ows:DCP>
         <ows:HTTP>
-          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble/wmts-getcapabilities.xml">
+          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_irregular/wmts-getcapabilities.xml">
             <ows:Constraint name="GetEncoding">
               <ows:AllowedValues>
                 <ows:Value>RESTful</ows:Value>
@@ -50,7 +50,7 @@
     <ows:Operation name="GetFeatureInfo">
       <ows:DCP>
         <ows:HTTP>
-          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble/wmts-getcapabilities.xml">
+          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_irregular/wmts-getcapabilities.xml">
             <ows:Constraint name="GetEncoding">
               <ows:AllowedValues>
                 <ows:Value>RESTful</ows:Value>
@@ -77,7 +77,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>EPSG_4326</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/jpeg" resourceType="tile" template="http://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg"/>
+      <ResourceURL format="image/jpeg" resourceType="tile" template="http://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_irregular/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg"/>
     </Layer>
     <TileMatrixSet>
       <ows:Identifier>EPSG_4326</ows:Identifier>
