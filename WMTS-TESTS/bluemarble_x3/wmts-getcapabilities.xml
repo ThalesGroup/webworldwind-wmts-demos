@@ -88,8 +88,8 @@
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
-        <MatrixWidth>4</MatrixWidth>
-        <MatrixHeight>2</MatrixHeight>
+        <MatrixWidth>2</MatrixWidth>
+        <MatrixHeight>1</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
         <ows:Identifier>1</ows:Identifier>
@@ -106,8 +106,8 @@
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
-        <MatrixWidth>10</MatrixWidth>
-        <MatrixHeight>5</MatrixHeight>
+        <MatrixWidth>18</MatrixWidth>
+        <MatrixHeight>9</MatrixHeight>
       </TileMatrix>
       <TileMatrix>
         <ows:Identifier>3</ows:Identifier>
@@ -115,8 +115,8 @@
         <TopLeftCorner>90.0 -180.0</TopLeftCorner>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
-        <MatrixWidth>18</MatrixWidth>
-        <MatrixHeight>9</MatrixHeight>
+        <MatrixWidth>54</MatrixWidth>
+        <MatrixHeight>27</MatrixHeight>
       </TileMatrix>
     </TileMatrixSet>
   </Contents>
