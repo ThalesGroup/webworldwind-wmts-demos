@@ -2,8 +2,8 @@
 
 <Capabilities xmlns="http://www.opengis.net/wmts/1.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml" xsi:schemaLocation="http://www.opengis.net/wmts/1.0 http://schemas.opengis.net/wmts/1.0/wmtsGetCapabilities_response.xsd" version="1.0.0">
   <ows:ServiceIdentification>
-    <ows:Title>bluemarble WMTS test layer (irregular TileMatrixSets)</ows:Title>
-    <ows:Abstract>bluemarble WMTS test layer (irregular TileMatrixSets)</ows:Abstract>
+    <ows:Title>bluemarble WMTS test layer (2x2 subtiles per parent tile)</ows:Title>
+    <ows:Abstract>bluemarble WMTS test layer (2x2 subtiles per parent tile)</ows:Abstract>
     <ows:Keywords>
       <ows:Keyword>WMTS</ows:Keyword>
     </ows:Keywords>
@@ -24,7 +24,7 @@
     <ows:Operation name="GetCapabilities">
       <ows:DCP>
         <ows:HTTP>
-          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_irregular/wmts-getcapabilities.xml">
+          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_x2/wmts-getcapabilities.xml">
             <ows:Constraint name="GetEncoding">
               <ows:AllowedValues>
                 <ows:Value>RESTful</ows:Value>
@@ -37,7 +37,7 @@
     <ows:Operation name="GetTile">
       <ows:DCP>
         <ows:HTTP>
-          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_irregular/wmts-getcapabilities.xml">
+          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_x2/wmts-getcapabilities.xml">
             <ows:Constraint name="GetEncoding">
               <ows:AllowedValues>
                 <ows:Value>RESTful</ows:Value>
@@ -50,7 +50,7 @@
     <ows:Operation name="GetFeatureInfo">
       <ows:DCP>
         <ows:HTTP>
-          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_irregular/wmts-getcapabilities.xml">
+          <ows:Get xlink:href="https://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_x2/wmts-getcapabilities.xml">
             <ows:Constraint name="GetEncoding">
               <ows:AllowedValues>
                 <ows:Value>RESTful</ows:Value>
@@ -77,7 +77,7 @@
       <TileMatrixSetLink>
         <TileMatrixSet>EPSG_4326</TileMatrixSet>
       </TileMatrixSetLink>
-      <ResourceURL format="image/jpeg" resourceType="tile" template="http://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_irregular/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg"/>
+      <ResourceURL format="image/jpeg" resourceType="tile" template="http://thales-geo.github.io/webworldwind-demos/WMTS-TESTS/bluemarble_x2/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg"/>
     </Layer>
     <TileMatrixSet>
       <ows:Identifier>EPSG_4326</ows:Identifier>
