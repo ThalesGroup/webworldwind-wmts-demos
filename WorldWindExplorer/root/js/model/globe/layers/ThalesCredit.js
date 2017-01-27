@@ -14,8 +14,9 @@ define([
             WorldWind.TiledImageLayer.call(this, new WorldWind.Sector(-90,90,-180,180), new WorldWind.Position(36,36), 19, 'image/png',
                 'toto', 256, 256);
 
-            // this.creditImage = WorldWind.configuration.baseUrl + "../../../../images/logoThales.jpg";
-            this.creditImage = WorldWind.configuration.baseUrl + "../../../../images/thalesLogo.png";
+            // this.creditImage = WorldWind.configuration.baseUrl + "../../../../images/thalesLogo.png";
+            this.creditImage = WorldWind.configuration.baseUrl + "../../../../images/THALES_logo_350x250px_cropped.png";
+
         };
 
         ThalesCredit.prototype = Object.create(WorldWind.TiledImageLayer.prototype);

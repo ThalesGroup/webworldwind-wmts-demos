@@ -43,6 +43,15 @@ define([
             this.wwd.addEventListener("mousedown", function (event) {
                 self.handlePick(event);
             });
+            // this.wwd.addEventListener("pointerdown", function (event) {
+            //     self.handlePick(event);
+            // });
+            // this.wwd.addEventListener("pointerup", function (event) {
+            //     self.handlePick(event);
+            // });
+            // this.wwd.addEventListener("pointermove", function (event) {
+            //     self.handlePick(event);
+            // });
             // Listen for mouse moves and tap gestutes to move an item
             this.wwd.addEventListener("mousemove", function (event) {
                 self.handlePick(event);
@@ -119,6 +128,7 @@ define([
             pickList = this.wwd.pick(this.wwd.canvasCoordinates(x, y));
             switch (type) {
                 case 'touchstart':
+                case 'pointerdown':
                 case 'mousedown':
                     // Handles right AND left-clicks, and touch event
                     if (pickList.hasNonTerrainObjects()) {
@@ -136,6 +146,7 @@ define([
                     }
                     break;
                 case 'touchmove':
+                case 'pointermove':
                 case 'mousemove':
                     if (this.pickedItem) {
                         // Handle left-clicks and touch device 
@@ -161,6 +172,7 @@ define([
                     break;
                 case 'touchend':
                 case 'touchcancel':
+                case 'pointerup':
                 case 'mouseup':
                 case 'mouseout':
                     if (this.pickedItem) {

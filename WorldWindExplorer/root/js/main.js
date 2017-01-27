@@ -95,7 +95,6 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
         globe = new Globe(wwd, globeOptions);
 
 
-
         // Defined the Globe's layers and layer options
         // var blueMarble = new WorldWind.BMNGLayer();
         // blueMarble.info = "Native Web World Wind layer";
@@ -113,9 +112,7 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
         //globe.layerManager.addBaseLayer(new WorldWind.OpenStreetMapImageLayer(null), {enabled: false, opacity: 0.7, detailHint: config.imageryDetailHint});
 
 
-
         //////////////////////////////////////////////////////////////////////////////
-
 
 
         // Variable to store the capabilities documents
@@ -132,7 +129,7 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                 {
 
                     for (var i = 0; i < wmtsCapabilities.contents.layer.length; i++) {
-                        switch(wmtsCapabilities.contents.layer[i].identifier) {
+                        switch (wmtsCapabilities.contents.layer[i].identifier) {
                             case "AMSR2_Wind_Speed_Day" :
                                 var config1 = WorldWind.WmtsLayer.formLayerConfiguration(wmtsCapabilities.contents.layer[i]);
                                 var layer1 = new WorldWind.WmtsLayer(config1, "2016-06-08");
@@ -297,19 +294,17 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
 
                     // globe.layerManager.addBaseLayer(layer4, {enabled: false, detailHint: config.imageryDetailHint});
 
-                    var blueMarble = new WorldWind.BMNGLayer();
-                    blueMarble.info = "Native Web World Wind layer";
-                    globe.layerManager.addBaseLayer(blueMarble, {enabled: true, hideInMenu: true, detailHint: config.imageryDetailHint});
-
-                    globe.layerManager.addBaseLayer(layer3, {enabled: false, detailHint: config.imageryDetailHint});
 
 
-                    globe.layerManager.addBaseLayer(layer1, {enabled: false, detailHint: config.imageryDetailHint});
+                    // globe.layerManager.addBaseLayer(layer3, {enabled: false, detailHint: config.imageryDetailHint});
+
+
+                    // globe.layerManager.addBaseLayer(layer1, {enabled: false, detailHint: config.imageryDetailHint});
                     // globe.layerManager.addBaseLayer(layer2, {enabled: false, detailHint: config.imageryDetailHint});
 
-                    globe.layerManager.addBaseLayer(layer5, {enabled: false, detailHint: config.imageryDetailHint});
+                    // globe.layerManager.addBaseLayer(layer5, {enabled: false, detailHint: config.imageryDetailHint});
                     globe.layerManager.addBaseLayer(layer6, {enabled: false, detailHint: config.imageryDetailHint});
-                    globe.layerManager.addBaseLayer(layer7, {enabled: false, detailHint: config.imageryDetailHint});
+                    // globe.layerManager.addBaseLayer(layer7, {enabled: false, detailHint: config.imageryDetailHint});
 
                 }
 
@@ -317,7 +312,7 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                 var maxResolution3857 = 156543.03392803908;
                 var resolutions3857 = [];
                 for (var ii = 0; ii < 18; ii++) {
-                    resolutions3857.push(maxResolution3857/Math.pow(2,ii));
+                    resolutions3857.push(maxResolution3857 / Math.pow(2, ii));
                 }
 
                 // Create tile matrix set
@@ -400,9 +395,8 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
 
                     dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoEsa.png");
                 };
-                globe.layerManager.addBaseLayer(esa1, {enabled: false, detailHint: config.imageryDetailHint});
+                // globe.layerManager.addBaseLayer(esa1, {enabled: false, detailHint: config.imageryDetailHint});
                 globe.layerManager.addBaseLayer(esa2, {enabled: false, detailHint: config.imageryDetailHint});
-
 
 
                 var maxResolution = 0.703125;
@@ -411,59 +405,274 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
                     resolutions.push(maxResolution / Math.pow(2, ii));
                 }
 
-                var tmsMrdsLayer = new WorldWind.TmsLayer({
-                    extent: [-180, -90, 180, 90],
-                    resolutions: resolutions,
-                    origin: [-180, -90],
-                    format: "image/png",
-                    coordinateSystem: "EPSG:4326",
-                    size: 256,
-                    matrixSet: "WGS84",
-                    layerName: "mrds",
-                    service: "http://mrdata.usgs.gov/mapcache/tms/1.0.0/"
-                }, "(TMS) Mineral Resources Data System");
-                tmsMrdsLayer.info = "TMS Layer from United States Geological Survey representing metallic and nonmetallic mineral resources throughout the world";
-                tmsMrdsLayer.doRender = function (dc) {
-                    WorldWind.TiledImageLayer.prototype.doRender.call(this, dc);
-                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoUsgs.png");
-                };
-
-                var tmsAkgeolLayer = new WorldWind.TmsLayer({
-                    extent: [-180, -90, 180, 90],
-                    resolutions: resolutions,
-                    origin: [-180, -90],
-                    format: "image/png",
-                    coordinateSystem: "EPSG:4326",
-                    size: 256,
-                    matrixSet: "WGS84",
-                    layerName: "akgeol",
-                    service: "http://mrdata.usgs.gov/mapcache/tms/1.0.0/"
-                }, "(TMS) Alaska Geology");
-                tmsAkgeolLayer.info = "TMS Layer from United States Geological Survey representing Alaska Geology";
-                tmsAkgeolLayer.doRender = function (dc) {
-                    WorldWind.TiledImageLayer.prototype.doRender.call(this, dc);
-                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoUsgs.png");
-                };
-
-                globe.layerManager.addBaseLayer(tmsMrdsLayer, {enabled: false, detailHint: config.imageryDetailHint});
-                globe.layerManager.addBaseLayer(tmsAkgeolLayer, {enabled: false, detailHint: config.imageryDetailHint});
+                // var tmsMrdsLayer = new WorldWind.TmsLayer({
+                //     extent: [-180, -90, 180, 90],
+                //     resolutions: resolutions,
+                //     origin: [-180, -90],
+                //     format: "image/png",
+                //     coordinateSystem: "EPSG:4326",
+                //     size: 256,
+                //     matrixSet: "WGS84",
+                //     layerName: "mrds",
+                //     service: "http://mrdata.usgs.gov/mapcache/tms/1.0.0/"
+                // }, "(TMS) Mineral Resources Data System");
+                // tmsMrdsLayer.info = "TMS Layer from United States Geological Survey representing metallic and nonmetallic mineral resources throughout the world";
+                // tmsMrdsLayer.doRender = function (dc) {
+                //     WorldWind.TiledImageLayer.prototype.doRender.call(this, dc);
+                //     dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoUsgs.png");
+                // };
+                //
+                // var tmsAkgeolLayer = new WorldWind.TmsLayer({
+                //     extent: [-180, -90, 180, 90],
+                //     resolutions: resolutions,
+                //     origin: [-180, -90],
+                //     format: "image/png",
+                //     coordinateSystem: "EPSG:4326",
+                //     size: 256,
+                //     matrixSet: "WGS84",
+                //     layerName: "akgeol",
+                //     service: "http://mrdata.usgs.gov/mapcache/tms/1.0.0/"
+                // }, "(TMS) Alaska Geology");
+                // tmsAkgeolLayer.info = "TMS Layer from United States Geological Survey representing Alaska Geology";
+                // tmsAkgeolLayer.doRender = function (dc) {
+                //     WorldWind.TiledImageLayer.prototype.doRender.call(this, dc);
+                //     dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/logoUsgs.png");
+                // };
+                //
+                // globe.layerManager.addBaseLayer(tmsMrdsLayer, {enabled: false, detailHint: config.imageryDetailHint});
+                // globe.layerManager.addBaseLayer(tmsAkgeolLayer, {enabled: false, detailHint: config.imageryDetailHint});
 
 
             });
 
 
+        /********************/
+        // Variable to store the capabilities documents
+        var wmsCapabilities;
+
+        // Fetch capabilities document
+        $.get('http://ip-84-39-38-157.rev.cloudwatt.com/eumetsat/ows?service=wms&version=1.3.0&request=GetCapabilities', function (response) {
+            // Parse capabilities
+            response = response.split('http://eumetview.eumetsat.int:80/geoserv/ows').join('http://ip-84-39-38-157.rev.cloudwatt.com/eumetsat/ows');
+            wmsCapabilities = new WorldWind.WmsCapabilities(jQuery.parseXML(response));
+        }, 'text')
+            .done(function () {
+
+                /*                              Create a layer from capabilities document                             */
+                {
+
+                    for (var i = 0; i < wmsCapabilities.capability.layers[0].layers.length; i++) {
+                        switch (wmsCapabilities.capability.layers[0].layers[i].title) {
+                            case "msg_microphysics" :
+                                var config1 = WorldWind.WmsLayer.formLayerConfiguration(wmsCapabilities.capability.layers[0].layers[i]);
+                                var layer1 = new WorldWind.WmsLayer(config1);
+                                layer1.displayName = "Meteosat Micro physics";
+                                layer1.info = "WMS layer from Eumetsat";
+                                layer1.doRender = function (dc) {
+                                    if (!dc.terrain)
+                                        return;
+
+                                    if (this.currentTilesInvalid
+                                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                                        this.currentTilesInvalid = false;
+                                        this.assembleTiles(dc);
+                                    }
+
+                                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                                    if (this.currentTiles.length > 0) {
+                                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                                        this.inCurrentFrame = true;
+                                    }
+
+                                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/EUMETSAT_logo_350x250px_cropped.png");
+                                };
+                                break;
+
+                            case "msg_natural" :
+                                var config2 = WorldWind.WmsLayer.formLayerConfiguration(wmsCapabilities.capability.layers[0].layers[i]);
+                                var layer2 = new WorldWind.WmsLayer(config2);
+                                layer2.displayName = "Meteosat Natural";
+                                layer2.info = "WMS layer from Eumetsat";
+                                layer2.doRender = function (dc) {
+                                    if (!dc.terrain)
+                                        return;
+
+                                    if (this.currentTilesInvalid
+                                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                                        this.currentTilesInvalid = false;
+                                        this.assembleTiles(dc);
+                                    }
+
+                                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                                    if (this.currentTiles.length > 0) {
+                                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                                        this.inCurrentFrame = true;
+                                    }
+
+                                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/EUMETSAT_logo_350x250px_cropped.png");
+                                };
+                                break;
+
+                            case "msg_snow" :
+                                var config3 = WorldWind.WmsLayer.formLayerConfiguration(wmsCapabilities.capability.layers[0].layers[i]);
+                                var layer3 = new WorldWind.WmsLayer(config3);
+                                layer3.displayName = "Meteosat Snow";
+                                layer3.info = "WMS layer from Eumetsat";
+                                layer3.doRender = function (dc) {
+                                    if (!dc.terrain)
+                                        return;
+
+                                    if (this.currentTilesInvalid
+                                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                                        this.currentTilesInvalid = false;
+                                        this.assembleTiles(dc);
+                                    }
+
+                                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                                    if (this.currentTiles.length > 0) {
+                                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                                        this.inCurrentFrame = true;
+                                    }
+
+                                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/EUMETSAT_logo_350x250px_cropped.png");
+                                };
+                                break;
+
+                            case "msg_dust" :
+                                var config4 = WorldWind.WmsLayer.formLayerConfiguration(wmsCapabilities.capability.layers[0].layers[i]);
+                                var layer4 = new WorldWind.WmsLayer(config4);
+                                layer4.displayName = "Meteosat Dust";
+                                layer4.info = "WMS layer from Eumetsat";
+                                layer4.doRender = function (dc) {
+                                    if (!dc.terrain)
+                                        return;
+
+                                    if (this.currentTilesInvalid
+                                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                                        this.currentTilesInvalid = false;
+                                        this.assembleTiles(dc);
+                                    }
+
+                                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                                    if (this.currentTiles.length > 0) {
+                                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                                        this.inCurrentFrame = true;
+                                    }
+
+                                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/EUMETSAT_logo_350x250px_cropped.png");
+                                };
+                                break;
+
+                            case "msg_convection" :
+                                var config5 = WorldWind.WmsLayer.formLayerConfiguration(wmsCapabilities.capability.layers[0].layers[i]);
+                                var layer5 = new WorldWind.WmsLayer(config5);
+                                layer5.displayName = "Meteosat Convection";
+                                layer5.info = "WMS layer from Eumetsat";
+                                layer5.doRender = function (dc) {
+                                    if (!dc.terrain)
+                                        return;
+
+                                    if (this.currentTilesInvalid
+                                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                                        this.currentTilesInvalid = false;
+                                        this.assembleTiles(dc);
+                                    }
+
+                                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                                    if (this.currentTiles.length > 0) {
+                                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                                        this.inCurrentFrame = true;
+                                    }
+
+                                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/EUMETSAT_logo_350x250px_cropped.png");
+                                };
+                                break;
+
+                            case "mtp_wv064" :
+                                var config6 = WorldWind.WmsLayer.formLayerConfiguration(wmsCapabilities.capability.layers[0].layers[i]);
+                                var layer6 = new WorldWind.WmsLayer(config6);
+                                layer6.displayName = "Metop WV064";
+                                layer6.info = "WMS layer from Eumetsat";
+                                layer6.doRender = function (dc) {
+                                    if (!dc.terrain)
+                                        return;
+
+                                    if (this.currentTilesInvalid
+                                        || !this.lasTtMVP || !dc.navigatorState.modelviewProjection.equals(this.lasTtMVP)
+                                        || dc.globeStateKey != this.lastGlobeStateKey) {
+                                        this.currentTilesInvalid = false;
+                                        this.assembleTiles(dc);
+                                    }
+
+                                    this.lasTtMVP = dc.navigatorState.modelviewProjection;
+                                    this.lastGlobeStateKey = dc.globeStateKey;
+
+                                    if (this.currentTiles.length > 0) {
+                                        dc.surfaceTileRenderer.renderTiles(dc, this.currentTiles, this.opacity);
+                                        dc.frameStatistics.incrementImageTileCount(this.currentTiles.length);
+                                        this.inCurrentFrame = true;
+                                    }
+
+                                    dc.screenCreditController.addImageCredit(WorldWind.configuration.baseUrl + "../../../../images/EUMETSAT_logo_350x250px_cropped.png");
+                                };
+                                break;
+
+                        }
+                    }
+
+                    globe.layerManager.addBaseLayer(layer1, {enabled: true, detailHint: config.imageryDetailHint});
+                    globe.layerManager.addBaseLayer(layer2, {enabled: false, detailHint: config.imageryDetailHint});
+                    globe.layerManager.addBaseLayer(layer3, {enabled: false, detailHint: config.imageryDetailHint});
+                    globe.layerManager.addBaseLayer(layer4, {enabled: false, detailHint: config.imageryDetailHint});
+                    globe.layerManager.addBaseLayer(layer5, {enabled: false, detailHint: config.imageryDetailHint});
+                    globe.layerManager.addBaseLayer(layer6, {enabled: false, detailHint: config.imageryDetailHint});
 
 
+                }
 
+
+            });
+        /********************/
 
 
         //////////////////////////////////////////////////////////////////////////////
 
 
+        var blueMarble = new WorldWind.BMNGLayer();
+        blueMarble.info = "Native Web World Wind layer";
+        globe.layerManager.addBaseLayer(blueMarble, {
+            enabled: true,
+            hideInMenu: true,
+            detailHint: config.imageryDetailHint
+        });
+
         wwd.addLayer(new ThalesCredit(), {enabled: true, detailHint: config.imageryDetailHint});
         // globe.layerManager.addOverlayLayer(new UsgsContoursLayer(), {enabled: false});
 
-        globe.layerManager.addDataLayer(new WorldWind.RenderableLayer(constants.LAYER_NAME_MARKERS), {enabled: true, pickEnabled: true});
+        globe.layerManager.addDataLayer(new WorldWind.RenderableLayer(constants.LAYER_NAME_MARKERS), {
+            enabled: true,
+            pickEnabled: true
+        });
 
         // Initialize the Explorer object
         explorer.initialize(globe);
