@@ -119,7 +119,8 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
         var wmtsCapabilities;
 
         // Fetch capabilities document
-        $.get('http://map1.vis.earthdata.nasa.gov/wmts-webmerc/wmts.cgi?SERVICE=WMTS&request=GetCapabilities', function (response) {
+        //$.get('http://map1.vis.earthdata.nasa.gov/wmts-webmerc/wmts.cgi?SERVICE=WMTS&request=GetCapabilities', function (response) {
+        $.get('http://home.nicolasvila.fr/wmts-webmerc/wmts.cgi?SERVICE=WMTS&request=GetCapabilities', function (response) {
             // Parse capabilities
             wmtsCapabilities = new WorldWind.WmtsCapabilities(response);
         })
