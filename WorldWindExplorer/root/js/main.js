@@ -451,9 +451,11 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
         var wmsCapabilities;
 
         // Fetch capabilities document
-        $.get('http://ip-84-39-38-157.rev.cloudwatt.com/eumetsat/ows?service=wms&version=1.3.0&request=GetCapabilities', function (response) {
+        //$.get('http://ip-84-39-38-157.rev.cloudwatt.com/eumetsat/ows?service=wms&version=1.3.0&request=GetCapabilities', function (response) {
+          $.get('http://home.nicolasvila.fr/eumetsat/ows?service=wms&version=1.3.0&request=GetCapabilities', function (response) {
             // Parse capabilities
-            response = response.split('http://eumetview.eumetsat.int:80/geoserv/ows').join('http://ip-84-39-38-157.rev.cloudwatt.com/eumetsat/ows');
+            //response = response.split('http://eumetview.eumetsat.int:80/geoserv/ows').join('http://ip-84-39-38-157.rev.cloudwatt.com/eumetsat/ows');
+              response = response.split('http://eumetview.eumetsat.int:80/geoserv/ows').join('http://home.nicolasvila.fr/eumetsat/ows');
             wmsCapabilities = new WorldWind.WmsCapabilities(jQuery.parseXML(response));
         }, 'text')
             .done(function () {
