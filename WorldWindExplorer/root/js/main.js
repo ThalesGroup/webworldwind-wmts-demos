@@ -120,9 +120,9 @@ require(['knockout', 'jquery', 'bootstrap', 'worldwind',
 
         // Fetch capabilities document
         //$.get('http://map1.vis.earthdata.nasa.gov/wmts-webmerc/wmts.cgi?SERVICE=WMTS&request=GetCapabilities', function (response) {
-        $.get('http://home.nicolasvila.fr/wmts-webmerc/wmts.cgi?SERVICE=WMTS&request=GetCapabilities', function (response) {
+        $.get('https://home.nicolasvila.fr/wmts-webmerc/wmts.cgi?SERVICE=WMTS&request=GetCapabilities', function (response) {
             // Parse capabilities
-            response = response.split('http://map1.vis.earthdata.nasa.gov/wmts-webmerc').join('http://home.nicolasvila.fr/wmts-webmerc');
+            response = response.split('https://map1.vis.earthdata.nasa.gov/wmts-webmerc').join('https://home.nicolasvila.fr/wmts-webmerc');
             //wmtsCapabilities = new WorldWind.WmtsCapabilities(jQuery.parseXML(response));
             wmtsCapabilities = new WorldWind.WmtsCapabilities(response);
         })
