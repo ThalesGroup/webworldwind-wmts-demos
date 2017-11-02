@@ -1,6 +1,3 @@
-// Web World Wind
-// https://github.com/thales-geo/WebWorldWind/tree/wmts
-// Tag : thales-geocatalogue-3.0
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD.
@@ -450,7 +447,7 @@ define("../tools/almond", function(){});
  */
 /**
  * @exports AbstractError
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: AbstractError.js 2913 2015-03-19 19:01:18Z tgaskins $
  */
 define('error/AbstractError',[],function () {
     "use strict";
@@ -492,7 +489,7 @@ define('error/AbstractError',[],function () {
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Angle.js 2914 2015-03-19 19:10:19Z tgaskins $
  */
 define('geom/Angle',[], function () {
     "use strict";
@@ -700,7 +697,7 @@ define('geom/Angle',[], function () {
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Logger.js 3418 2015-08-22 00:17:05Z tgaskins $
  */
 define('util/Logger',[],function () {
     "use strict";
@@ -855,7 +852,7 @@ define('util/Logger',[],function () {
  */
 /**
  * @exports Color
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Color.js 3017 2015-04-14 17:10:31Z dcollins $
  */
 define('util/Color',[
         '../util/Logger'
@@ -1195,7 +1192,7 @@ define('util/Color',[
  */
 /**
  * @exports ArgumentError
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ArgumentError.js 2631 2015-01-02 21:32:32Z tgaskins $
  */
 define('error/ArgumentError',['../error/AbstractError'],
     function (AbstractError) {
@@ -1232,7 +1229,7 @@ define('error/ArgumentError',['../error/AbstractError'],
  */
 /**
  * @exports Font
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Font.js 2660 2015-01-20 19:20:11Z danm $
  */
 define('util/Font',[
         '../error/ArgumentError',
@@ -1545,7 +1542,7 @@ define('util/Insets',['../error/ArgumentError',
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Vec3.js 3001 2015-04-09 20:13:50Z tgaskins $
  */
 
 define('geom/Vec3',[
@@ -1667,8 +1664,8 @@ define('geom/Vec3',[
                     Logger.logMessage(Logger.LEVEL_SEVERE, "Vec3", "areColinear", "missingVector"));
             }
 
-            var ab = b.subtract(a).normalize(),
-                bc = c.subtract(b).normalize();
+           var ab = new Vec3(a[0]-b[0],a[1]-b[1],a[2]-b[2]).normalize(),
+               bc = new Vec3(c[0]-b[0],c[1]-b[1],c[2]-b[2]).normalize();
 
             // ab and bc are considered colinear if their dot product is near +/-1.
             return Math.abs(ab.dot(bc)) > 0.999;
@@ -2081,7 +2078,7 @@ define('geom/Vec3',[
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Vec2.js 2946 2015-03-31 20:37:33Z dcollins $
  */
 
 define('geom/Vec2',[
@@ -2401,7 +2398,7 @@ define('geom/Vec2',[
  */
 /**
  * @exports Offset
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Offset.js 2958 2015-04-01 23:25:29Z tgaskins $
  */
 define('util/Offset',['../geom/Vec2'
     ],
@@ -2513,7 +2510,7 @@ define('util/Offset',['../geom/Vec2'
  */
 /**
  * @exports TextAttributes
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: TextAttributes.js 3295 2015-06-30 19:16:37Z tgaskins $
  */
 define('shapes/TextAttributes',[
         '../util/Color',
@@ -2952,7 +2949,7 @@ define('shapes/AnnotationAttributes',[
  */
 /**
  * @exports GpuShader
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: GpuShader.js 2906 2015-03-17 18:45:22Z tgaskins $
  */
 define('shaders/GpuShader',[
         '../error/ArgumentError',
@@ -3045,7 +3042,7 @@ define('shaders/GpuShader',[
  */
 /**
  * @exports GpuProgram
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: GpuProgram.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('shaders/GpuProgram',[
         '../error/ArgumentError',
@@ -3322,7 +3319,7 @@ define('shaders/GpuProgram',[
  */
 /**
  * @exports BasicTextureProgram
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BasicTextureProgram.js 3327 2015-07-21 19:03:39Z dcollins $
  */
 define('shaders/BasicTextureProgram',[
         '../error/ArgumentError',
@@ -3610,7 +3607,7 @@ define('shaders/BasicTextureProgram',[
  */
 /**
  * @exports Line
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Line.js 2935 2015-03-27 17:59:48Z tgaskins $
  */
 define('geom/Line',[
         '../error/ArgumentError',
@@ -3700,7 +3697,7 @@ define('geom/Line',[
  */
 /**
  * @exports Plane
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Plane.js 2935 2015-03-27 17:59:48Z tgaskins $
  */
 define('geom/Plane',[
         '../error/ArgumentError',
@@ -3983,7 +3980,7 @@ define('geom/Plane',[
  */
 /**
  * @exports Rectangle
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Rectangle.js 3174 2015-06-10 19:36:49Z tgaskins $
  */
 define('geom/Rectangle',[
         '../util/Logger'
@@ -4138,7 +4135,7 @@ define('geom/Rectangle',[
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: WWMath.js 3305 2015-07-07 21:55:51Z dcollins $
  */
 define('util/WWMath',[
         '../geom/Angle',
@@ -4925,7 +4922,7 @@ define('util/WWMath',[
  */
 /**
  * @exports Location
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Location.js 3116 2015-05-27 01:30:07Z tgaskins $
  */
 define('geom/Location',[
         '../geom/Angle',
@@ -5859,7 +5856,7 @@ define('geom/Location',[
  */
 /**
  * @exports Position
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Position.js 2933 2015-03-27 01:18:24Z tgaskins $
  */
 define('geom/Position',[
         '../geom/Angle',
@@ -6051,18 +6048,19 @@ define('geom/Position',[
          */
         Position.prototype.toString = function () {
             return "(" + this.latitude.toString() + "\u00b0, " + this.longitude.toString() + "\u00b0, "
-                + this.altitude.toString();
+                + this.altitude.toString() + ")";
         };
 
         return Position;
     });
+
 /*
  * Copyright (C) 2014 United States Government as represented by the Administrator of the
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
  * @exports Texture
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Texture.js 3414 2015-08-20 19:09:19Z tgaskins $
  */
 define('render/Texture',[
         '../error/ArgumentError',
@@ -6192,7 +6190,7 @@ define('render/Texture',[
  */
 /**
  * @exports Matrix
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Matrix.js 3298 2015-07-06 17:28:33Z dcollins $
  */
 
 define('geom/Matrix',[
@@ -8019,7 +8017,7 @@ define('geom/Matrix',[
  */
 /**
  * @exports PickedObject
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: PickedObject.js 2940 2015-03-30 17:58:36Z tgaskins $
  */
 define('pick/PickedObject',[],
     function () {
@@ -8088,7 +8086,7 @@ define('pick/PickedObject',[],
  */
 /**
  * @exports UnsupportedOperationError
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: UnsupportedOperationError.js 2631 2015-01-02 21:32:32Z tgaskins $
  */
 define('error/UnsupportedOperationError',['../error/AbstractError'],
     function (AbstractError) {
@@ -8127,7 +8125,7 @@ define('error/UnsupportedOperationError',['../error/AbstractError'],
  */
 /**
  * @exports Renderable
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Renderable.js 2951 2015-03-31 23:31:08Z tgaskins $
  */
 define('render/Renderable',[
         '../util/Logger',
@@ -9224,7 +9222,7 @@ define('shaders/GroundProgram',[
  */
 /**
  * @exports Layer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Layer.js 3414 2015-08-20 19:09:19Z tgaskins $
  */
 define('layer/Layer',[
         '../util/Logger'
@@ -9598,7 +9596,7 @@ define('geom/Matrix3',[
  */
 /**
  * @exports Sector
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Sector.js 2933 2015-03-27 01:18:24Z tgaskins $
  */
 define('geom/Sector',[
         '../geom/Angle',
@@ -10199,7 +10197,7 @@ define('shaders/SkyProgram',[
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: WWUtil.js 3402 2015-08-14 17:28:09Z tgaskins $
  */
 define('util/WWUtil',[
         '../error/ArgumentError',
@@ -10806,7 +10804,7 @@ define('layer/AtmosphereLayer',[
  */
 /**
  * @exports BasicProgram
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BasicProgram.js 3327 2015-07-21 19:03:39Z dcollins $
  */
 define('shaders/BasicProgram',[
         '../error/ArgumentError',
@@ -11085,7 +11083,7 @@ define('util/BasicTimeSequence',[
  */
 /**
  * @exports AbsentResourceList
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: AbsentResourceList.js 2952 2015-04-01 00:33:54Z tgaskins $
  */
 define('util/AbsentResourceList',[],
     function () {
@@ -11217,7 +11215,7 @@ define('util/AbsentResourceList',[],
  */
 /**
  * @exports Frustum
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Frustum.js 2919 2015-03-22 20:46:59Z tgaskins $
  */
 define('geom/Frustum',[
         '../error/ArgumentError',
@@ -11529,7 +11527,7 @@ define('geom/Frustum',[
  */
 /**
  * @exports NotYetImplementedError
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: NotYetImplementedError.js 2631 2015-01-02 21:32:32Z tgaskins $
  */
 define('error/NotYetImplementedError',['../error/AbstractError'],
     function (AbstractError) {
@@ -11566,7 +11564,7 @@ define('error/NotYetImplementedError',['../error/AbstractError'],
  */
 /**
  * @exports BoundingBox
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BoundingBox.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('geom/BoundingBox',[
         '../error/ArgumentError',
@@ -12081,7 +12079,7 @@ define('geom/BoundingBox',[
  */
 /**
  * @exports Tile
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Tile.js 3125 2015-05-29 14:43:25Z tgaskins $
  */
 define('util/Tile',[
         '../error/ArgumentError',
@@ -12635,7 +12633,7 @@ define('util/Tile',[
  */
 /**
  * @exports TextureTile
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: TextureTile.js 2941 2015-03-30 21:11:43Z tgaskins $
  */
 define('render/TextureTile',[
         '../error/ArgumentError',
@@ -12714,7 +12712,7 @@ define('render/TextureTile',[
  */
 /**
  * @exports ImageTile
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ImageTile.js 2941 2015-03-30 21:11:43Z tgaskins $
  */
 define('render/ImageTile',[
         '../error/ArgumentError',
@@ -12847,7 +12845,7 @@ define('render/ImageTile',[
  */
 /**
  * @exports Level
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Level.js 2952 2015-04-01 00:33:54Z tgaskins $
  */
 define('util/Level',[
         '../geom/Angle',
@@ -12992,7 +12990,7 @@ define('util/Level',[
  */
 /**
  * @exports LevelSet
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: LevelSet.js 2952 2015-04-01 00:33:54Z tgaskins $
  */
 define('util/LevelSet',[
         '../error/ArgumentError',
@@ -13164,7 +13162,7 @@ define('util/LevelSet',[
  */
 /**
  * @exports MemoryCache
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: MemoryCache.js 2911 2015-03-19 18:36:01Z tgaskins $
  */
 define('cache/MemoryCache',[
         '../error/ArgumentError',
@@ -13997,7 +13995,7 @@ define('layer/TiledImageLayer',[
  */
 /**
  * @exports MercatorTiledImageLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: MercatorTiledImageLayer.js 3120 2015-05-28 02:32:45Z tgaskins $
  */
 define('layer/MercatorTiledImageLayer',[
         '../util/Color',
@@ -14169,7 +14167,7 @@ define('layer/MercatorTiledImageLayer',[
  */
 /**
  * @exports BingTiledImageLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BingTiledImageLayer.js 3120 2015-05-28 02:32:45Z tgaskins $
  */
 define('layer/BingTiledImageLayer',[
         '../geom/Angle',
@@ -14243,7 +14241,7 @@ define('layer/BingTiledImageLayer',[
  */
 /**
  * @exports BingImageryUrlBuilder
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BingImageryUrlBuilder.js 3094 2015-05-14 23:02:03Z tgaskins $
  */
 define('util/BingImageryUrlBuilder',[
         '../error/ArgumentError',
@@ -14394,7 +14392,7 @@ define('util/BingImageryUrlBuilder',[
  */
 /**
  * @exports BingAerialLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BingAerialLayer.js 2883 2015-03-06 19:04:42Z tgaskins $
  */
 define('layer/BingAerialLayer',[
         '../geom/Location',
@@ -14439,7 +14437,7 @@ define('layer/BingAerialLayer',[
  */
 /**
  * @exports BingAerialWithLabelsLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BingAerialWithLabelsLayer.js 2883 2015-03-06 19:04:42Z tgaskins $
  */
 define('layer/BingAerialWithLabelsLayer',[
         '../geom/Location',
@@ -14484,7 +14482,7 @@ define('layer/BingAerialWithLabelsLayer',[
  */
 /**
  * @exports BingRoadsLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BingRoadsLayer.js 2883 2015-03-06 19:04:42Z tgaskins $
  */
 define('layer/BingRoadsLayer',[
         '../geom/Location',
@@ -14532,7 +14530,7 @@ define('layer/BingRoadsLayer',[
  */
 /**
  * @exports WmsUrlBuilder
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: WmsUrlBuilder.js 3362 2015-07-31 19:29:12Z tgaskins $
  */
 define('util/WmsUrlBuilder',[
         '../error/ArgumentError',
@@ -14708,7 +14706,7 @@ define('util/WmsUrlBuilder',[
  */
 /**
  * @exports BingWMSLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BingWMSLayer.js 3403 2015-08-15 02:00:01Z tgaskins $
  */
 define('layer/BingWMSLayer',[
         '../geom/Location',
@@ -14744,7 +14742,7 @@ define('layer/BingWMSLayer',[
  */
 /**
  * @exports PeriodicTimeSequence
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: PeriodicTimeSequence.js 3362 2015-07-31 19:29:12Z tgaskins $
  */
 define('util/PeriodicTimeSequence',[
         '../error/ArgumentError',
@@ -15055,7 +15053,7 @@ define('util/PeriodicTimeSequence',[
  */
 /**
  * @exports LevelRowColumnUrlBuilder
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: LevelRowColumnUrlBuilder.js 2643 2015-01-09 20:37:58Z tgaskins $
  */
 define('util/LevelRowColumnUrlBuilder',[
         '../error/ArgumentError',
@@ -15414,7 +15412,7 @@ define('layer/BlueMarbleLayer',[
  */
 /**
  * @exports BMNGLandsatLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BMNGLandsatLayer.js 3403 2015-08-15 02:00:01Z tgaskins $
  */
 define('layer/BMNGLandsatLayer',[
         '../geom/Location',
@@ -15456,7 +15454,7 @@ define('layer/BMNGLandsatLayer',[
  */
 /**
  * @exports BMNGLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BMNGLayer.js 3403 2015-08-15 02:00:01Z tgaskins $
  */
 define('layer/BMNGLayer',[
         '../geom/Location',
@@ -15501,7 +15499,7 @@ define('layer/BMNGLayer',[
  */
 /**
  * @exports RenderableLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: RenderableLayer.js 3334 2015-07-22 19:15:43Z tgaskins $
  */
 define('layer/RenderableLayer',[
         '../error/ArgumentError',
@@ -15609,7 +15607,7 @@ define('layer/RenderableLayer',[
  */
 /**
  * @exports SurfaceTile
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceTile.js 2941 2015-03-30 21:11:43Z tgaskins $
  */
 define('render/SurfaceTile',[
         '../error/ArgumentError',
@@ -15678,7 +15676,7 @@ define('render/SurfaceTile',[
  */
 /**
  * @exports SurfaceImage
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceImage.js 3023 2015-04-15 20:24:17Z tgaskins $
  */
 define('shapes/SurfaceImage',[
         '../error/ArgumentError',
@@ -15823,7 +15821,7 @@ define('shapes/SurfaceImage',[
  */
 /**
  * @exports BMNGOneImageLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: BMNGOneImageLayer.js 2942 2015-03-30 21:16:36Z tgaskins $
  */
 define('layer/BMNGOneImageLayer',[
         '../layer/RenderableLayer',
@@ -15866,7 +15864,7 @@ define('layer/BMNGOneImageLayer',[
  */
 /**
  * @exports Touch
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Touch.js 3221 2015-06-19 22:55:04Z dcollins $
  */
 define('gesture/Touch',[],
     function () {
@@ -15969,7 +15967,7 @@ define('gesture/Touch',[],
  */
 /**
  * @exports GestureRecognizer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: GestureRecognizer.js 3241 2015-06-22 23:52:49Z dcollins $
  */
 define('gesture/GestureRecognizer',[
         '../error/ArgumentError',
@@ -16725,7 +16723,7 @@ define('gesture/GestureRecognizer',[
  */
 /**
  * @exports ClickRecognizer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ClickRecognizer.js 3223 2015-06-19 23:16:36Z dcollins $
  */
 define('gesture/ClickRecognizer',['../gesture/GestureRecognizer'],
     function (GestureRecognizer) {
@@ -19066,7 +19064,7 @@ define('formats/collada/ColladaLoader',[
  */
 /**
  * @exports ImageSource
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ImageSource.js 3023 2015-04-15 20:24:17Z tgaskins $
  */
 define('util/ImageSource',[
         '../error/ArgumentError',
@@ -19123,7 +19121,7 @@ define('util/ImageSource',[
  */
 /**
  * @exports ScreenImage
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ScreenImage.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('shapes/ScreenImage',[
         '../error/ArgumentError',
@@ -19501,7 +19499,7 @@ define('shapes/ScreenImage',[
  */
 /**
  * @exports Compass
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Compass.js 3114 2015-05-27 01:08:58Z tgaskins $
  */
 define('shapes/Compass',[
         '../error/ArgumentError',
@@ -19579,7 +19577,7 @@ define('shapes/Compass',[
  */
 /**
  * @exports CompassLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: CompassLayer.js 2978 2015-04-03 22:55:55Z tgaskins $
  */
 define('layer/CompassLayer',[
         '../shapes/Compass',
@@ -19636,7 +19634,7 @@ define('layer/CompassLayer',[
  */
 /**
  * @exports Text
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Text.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('shapes/Text',[
         '../error/ArgumentError',
@@ -20207,7 +20205,7 @@ define('shapes/Text',[
  */
 /**
  * @exports ScreenText
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ScreenText.js 3293 2015-06-30 18:20:17Z dcollins $
  */
 define('shapes/ScreenText',[
         '../error/ArgumentError',
@@ -20290,7 +20288,7 @@ define('shapes/ScreenText',[
  */
 /**
  * @exports CoordinatesDisplayLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: CoordinatesDisplayLayer.js 3319 2015-07-15 20:45:54Z dcollins $
  */
 define('layer/CoordinatesDisplayLayer',[
         '../error/ArgumentError',
@@ -20607,7 +20605,7 @@ define('util/Date',[], function () {
  */
 /**
  * @exports DigitalGlobeTiledImageLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: DigitalGlobeTiledImageLayer.js 3418 2015-08-22 00:17:05Z tgaskins $
  */
 define('layer/DigitalGlobeTiledImageLayer',[
         '../geom/Angle',
@@ -20757,7 +20755,7 @@ define('layer/DigitalGlobeTiledImageLayer',[
  */
 /**
  * @exports DragRecognizer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: DragRecognizer.js 3223 2015-06-19 23:16:36Z dcollins $
  */
 define('gesture/DragRecognizer',['../gesture/GestureRecognizer'],
     function (GestureRecognizer) {
@@ -20856,7 +20854,7 @@ define('gesture/DragRecognizer',['../gesture/GestureRecognizer'],
  */
 /**
  * @exports FrameStatistics
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: FrameStatistics.js 3343 2015-07-28 18:22:59Z dcollins $
  */
 define('util/FrameStatistics',[],
     function () {
@@ -21067,7 +21065,7 @@ define('util/FrameStatistics',[],
  */
 /**
  * @exports FramebufferTexture
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: FramebufferTexture.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('render/FramebufferTexture',[
         '../error/ArgumentError',
@@ -21208,7 +21206,7 @@ define('render/FramebufferTexture',[
  */
 /**
  * @exports FramebufferTile
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: FramebufferTile.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('render/FramebufferTile',[
         '../error/ArgumentError',
@@ -21334,7 +21332,7 @@ define('render/FramebufferTile',[
  */
 /**
  * @exports FramebufferTileController
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: FramebufferTileController.js 3130 2015-05-29 18:20:15Z dcollins $
  */
 define('render/FramebufferTileController',[
         '../error/ArgumentError',
@@ -21585,7 +21583,7 @@ define('render/FramebufferTileController',[
  */
 /**
  * @exports ElevationImage
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ElevationImage.js 2936 2015-03-27 22:04:59Z tgaskins $
  */
 define('globe/ElevationImage',[
         '../error/ArgumentError',
@@ -21908,7 +21906,7 @@ define('globe/ElevationImage',[
  */
 /**
  * @exports ElevationTile
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ElevationTile.js 2936 2015-03-27 22:04:59Z tgaskins $
  */
 define('globe/ElevationTile',[
         '../error/ArgumentError',
@@ -21987,7 +21985,7 @@ define('globe/ElevationTile',[
  */
 /**
  * @exports ElevationModel
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ElevationModel.js 3415 2015-08-20 19:15:57Z tgaskins $
  */
 define('globe/ElevationModel',[
         '../util/AbsentResourceList',
@@ -22666,7 +22664,7 @@ define('globe/ElevationModel',[
  */
 /**
  * @exports GeographicProjection
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: GeographicProjection.js 2821 2015-02-20 16:59:27Z dcollins $
  */
 define('projections/GeographicProjection',[
         '../error/ArgumentError',
@@ -23186,7 +23184,7 @@ define('projections/ProjectionWgs84',[
  */
 /**
  * @exports NavigatorState
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: NavigatorState.js 3279 2015-06-26 22:42:56Z tgaskins $
  */
 define('navigate/NavigatorState',[
         '../error/ArgumentError',
@@ -23732,7 +23730,7 @@ define('navigate/NavigatorState',[
  */
 /**
  * @exports Terrain
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Terrain.js 3018 2015-04-14 17:50:06Z dcollins $
  */
 define('globe/Terrain',[
         '../error/ArgumentError',
@@ -23953,7 +23951,7 @@ define('globe/Terrain',[
  */
 /**
  * @exports TerrainTile
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: TerrainTile.js 2936 2015-03-27 22:04:59Z tgaskins $
  */
 define('globe/TerrainTile',[
         '../error/ArgumentError',
@@ -24179,7 +24177,7 @@ define('globe/TerrainTile',[
  */
 /**
  * @exports TerrainTileList
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: TerrainTileList.js 2758 2015-02-09 00:20:46Z tgaskins $
  */
 define('globe/TerrainTileList',['../error/ArgumentError',
         '../util/Logger',
@@ -24254,7 +24252,7 @@ define('globe/TerrainTileList',['../error/ArgumentError',
  */
 /**
  * @exports Tessellator
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Tessellator.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('globe/Tessellator',[
         '../error/ArgumentError',
@@ -25788,7 +25786,7 @@ define('globe/Tessellator',[
  */
 /**
  * @exports Globe
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Globe.js 2940 2015-03-30 17:58:36Z tgaskins $
  */
 define('globe/Globe',[
         '../geom/Angle',
@@ -26408,7 +26406,7 @@ define('globe/Globe',[
  */
 /**
  * @exports GpuResourceCache
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: GpuResourceCache.js 3023 2015-04-15 20:24:17Z tgaskins $
  */
 define('cache/GpuResourceCache',[
         '../util/AbsentResourceList',
@@ -26662,7 +26660,7 @@ define('cache/GpuResourceCache',[
  */
 /**
  * @exports PickedObjectList
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: PickedObjectList.js 2940 2015-03-30 17:58:36Z tgaskins $
  */
 define('pick/PickedObjectList',[],
     function () {
@@ -26767,7 +26765,7 @@ define('pick/PickedObjectList',[],
  */
 /**
  * @exports ScreenCreditController
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ScreenCreditController.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('render/ScreenCreditController',[
         '../error/ArgumentError',
@@ -26900,7 +26898,7 @@ define('render/ScreenCreditController',[
                 imageHeight, maxImageHeight = 0;
 
             for (var i = 0; i < this.imageUrls.length; i++) {
-                imageHeight = this.drawImageCredit(dc, this.imageUrls[i], imageX, dc.navigatorState.viewport.height - this.margin*9);
+                imageHeight = this.drawImageCredit(dc, this.imageUrls[i], imageX, this.margin);
                 if (imageHeight > 0) {
                     imageX -= (this.margin + this.imageCreditSize);
                     maxImageHeight = WWMath.max(imageHeight, maxImageHeight);
@@ -27060,7 +27058,7 @@ define('render/ScreenCreditController',[
  */
 /**
  * @exports ShapeAttributes
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ShapeAttributes.js 3270 2015-06-26 01:09:56Z tgaskins $
  */
 define('shapes/ShapeAttributes',[
         '../util/Color',
@@ -27365,7 +27363,7 @@ define('shapes/ShapeAttributes',[
  */
 /**
  * @exports SurfaceShape
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceShape.js 3191 2015-06-15 19:35:57Z tgaskins $
  */
 define('shapes/SurfaceShape',[
         '../error/AbstractError',
@@ -28416,7 +28414,7 @@ define('shapes/SurfaceShape',[
  */
 /**
  * @exports SurfaceShapeTile
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceShapeTile.js 3048 2015-04-23 23:26:47Z danm $
  */
 define('shapes/SurfaceShapeTile',[
         '../geom/Angle',
@@ -28706,7 +28704,7 @@ define('shapes/SurfaceShapeTile',[
  */
 /**
  * @exports SurfaceShapeTileBuilder
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceShapeTileBuilder.js 3048 2015-04-23 23:26:47Z danm $
  */
 define('shapes/SurfaceShapeTileBuilder',[
         '../error/ArgumentError',
@@ -29253,7 +29251,7 @@ define('shapes/SurfaceShapeTileBuilder',[
  */
 /**
  * @exports SurfaceTileRendererProgram
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceTileRendererProgram.js 3327 2015-07-21 19:03:39Z dcollins $
  */
 define('shaders/SurfaceTileRendererProgram',[
         '../error/ArgumentError',
@@ -29503,7 +29501,7 @@ define('shaders/SurfaceTileRendererProgram',[
  */
 /**
  * @exports SurfaceTileRenderer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceTileRenderer.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('render/SurfaceTileRenderer',[
         '../error/ArgumentError',
@@ -29689,7 +29687,7 @@ define('render/SurfaceTileRenderer',[
  */
 /**
  * @exports TextSupport
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: TextSupport.js 3302 2015-07-06 22:20:36Z dcollins $
  */
 define('render/TextSupport',[
         '../error/ArgumentError',
@@ -29971,7 +29969,7 @@ define('render/TextSupport',[
  */
 /**
  * @exports DrawContext
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: DrawContext.js 3351 2015-07-28 22:03:20Z dcollins $
  */
 define('render/DrawContext',[
         '../error/ArgumentError',
@@ -31185,7 +31183,7 @@ define('render/DrawContext',[
  */
 /**
  * @exports EarthElevationModel
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: EarthElevationModel.js 2936 2015-03-27 22:04:59Z tgaskins $
  */
 define('globe/EarthElevationModel',[
         '../geom/Location',
@@ -31229,7 +31227,7 @@ define('globe/EarthElevationModel',[
  */
 /**
  * @exports EarthRestElevationModel
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: EarthElevationModel.js 2638 2015-01-05 20:44:18Z tgaskins $
  */
 define('globe/EarthRestElevationModel',[
         '../geom/Location',
@@ -31277,7 +31275,7 @@ define('globe/EarthRestElevationModel',[
  */
 /**
  * @exports FrameStatisticsLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: FrameStatisticsLayer.js 3343 2015-07-28 18:22:59Z dcollins $
  */
 define('layer/FrameStatisticsLayer',[
         '../error/ArgumentError',
@@ -31374,7 +31372,7 @@ define('layer/FrameStatisticsLayer',[
  */
 /**
  * @exports AbstractShape
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: AbstractShape.js 3259 2015-06-25 00:53:55Z tgaskins $
  */
 define('shapes/AbstractShape',[
         '../error/ArgumentError',
@@ -32354,7 +32352,7 @@ define('shapes/AbstractMesh',[
  */
 /**
  * @exports SurfacePolygon
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfacePolygon.js 3193 2015-06-15 22:29:13Z tgaskins $
  */
 define('shapes/SurfacePolygon',[
         '../error/ArgumentError',
@@ -32886,7 +32884,7 @@ define('shapes/GeographicMesh',[
  */
 /**
  * @exports GeographicText
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: GeographicText.js 3262 2015-06-25 16:50:39Z tgaskins $
  */
 define('shapes/GeographicText',[
         '../error/ArgumentError',
@@ -39536,7 +39534,7 @@ define('formats/geojson/GeoJSONFeatureCollection',['../../error/ArgumentError',
  */
 /**
  * @exports PlacemarkAttributes
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: PlacemarkAttributes.js 3023 2015-04-15 20:24:17Z tgaskins $
  */
 define('shapes/PlacemarkAttributes',[
         '../util/Color',
@@ -39777,7 +39775,7 @@ define('shapes/PlacemarkAttributes',[
  */
 /**
  * @exports Placemark
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Placemark.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('shapes/Placemark',[
         '../error/ArgumentError',
@@ -45845,7 +45843,7 @@ define("util/libtess", function(){});
  */
 /**
  * @exports Polygon
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Polygon.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('shapes/Polygon',[
         '../shapes/AbstractShape',
@@ -46754,7 +46752,7 @@ define('shapes/Polygon',[
  */
 /**
  * @exports SurfacePolyline
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfacePolyline.js 3014 2015-04-14 01:06:17Z danm $
  */
 define('shapes/SurfacePolyline',[
         '../error/ArgumentError',
@@ -50646,7 +50644,7 @@ define('formats/geotiff/GeoTiffReader',[
  */
 /**
  * @exports ProjectionEquirectangular
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ProjectionEquirectangular.js 2821 2015-02-20 16:59:27Z dcollins $
  */
 define('projections/ProjectionEquirectangular',[
         '../geom/Angle',
@@ -50802,7 +50800,7 @@ define('projections/ProjectionEquirectangular',[
  */
 /**
  * @exports ZeroElevationModel
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ZeroElevationModel.js 2936 2015-03-27 22:04:59Z tgaskins $
  */
 define('globe/ZeroElevationModel',[
         '../error/ArgumentError',
@@ -50928,7 +50926,7 @@ define('globe/ZeroElevationModel',[
  */
 /**
  * @exports Globe2D
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Globe2D.js 3205 2015-06-17 18:05:23Z tgaskins $
  */
 define('globe/Globe2D',[
         '../globe/Globe',
@@ -50963,7 +50961,7 @@ define('globe/Globe2D',[
  */
 /**
  * @exports GoToAnimator
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: GoToAnimator.js 3164 2015-06-09 15:35:14Z tgaskins $
  */
 define('util/GoToAnimator',[
         '../geom/Location',
@@ -51222,7 +51220,7 @@ define('util/GoToAnimator',[
  */
 /**
  * @exports HighlightController
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: HighlightController.js 3260 2015-06-25 01:06:21Z tgaskins $
  */
 define('util/HighlightController',[
         '../error/ArgumentError',
@@ -66045,7 +66043,7 @@ define('formats/kml/features/KmlGroundOverlay',[
  */
 /**
  * @exports Path
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Path.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('shapes/Path',[
         '../shapes/AbstractShape',
@@ -68624,7 +68622,7 @@ define('formats/kml/geom/KmlTrack',[
  */
 /**
  * @exports LandsatRestLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: LandsatRestLayer.js 2939 2015-03-30 16:50:49Z tgaskins $
  */
 define('layer/LandsatRestLayer',[
         '../error/ArgumentError',
@@ -68678,7 +68676,7 @@ define('layer/LandsatRestLayer',[
  */
 /**
  * @exports Navigator
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Navigator.js 3298 2015-07-06 17:28:33Z dcollins $
  */
 define('navigate/Navigator',[
         '../error/ArgumentError',
@@ -68821,7 +68819,7 @@ define('navigate/Navigator',[
  */
 /**
  * @exports PanRecognizer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: PanRecognizer.js 3239 2015-06-22 23:28:12Z dcollins $
  */
 define('gesture/PanRecognizer',['../gesture/GestureRecognizer'],
     function (GestureRecognizer) {
@@ -68944,7 +68942,7 @@ define('gesture/PanRecognizer',['../gesture/GestureRecognizer'],
  */
 /**
  * @exports PinchRecognizer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: PinchRecognizer.js 3239 2015-06-22 23:28:12Z dcollins $
  */
 define('gesture/PinchRecognizer',['../gesture/GestureRecognizer'],
     function (GestureRecognizer) {
@@ -69104,7 +69102,7 @@ define('gesture/PinchRecognizer',['../gesture/GestureRecognizer'],
  */
 /**
  * @exports RotationRecognizer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: RotationRecognizer.js 3239 2015-06-22 23:28:12Z dcollins $
  */
 define('gesture/RotationRecognizer',[
         '../geom/Angle',
@@ -69270,7 +69268,7 @@ define('gesture/RotationRecognizer',[
  */
 /**
  * @exports TiltRecognizer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: TiltRecognizer.js 3223 2015-06-19 23:16:36Z dcollins $
  */
 define('gesture/TiltRecognizer',['../gesture/PanRecognizer'],
     function (PanRecognizer) {
@@ -69381,7 +69379,7 @@ define('gesture/TiltRecognizer',['../gesture/PanRecognizer'],
  */
 /**
  * @exports LookAtNavigator
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: LookAtNavigator.js 3321 2015-07-16 21:34:58Z dcollins $
  */
 define('navigate/LookAtNavigator',[
         '../geom/Angle',
@@ -69780,7 +69778,7 @@ define('navigate/LookAtNavigator',[
  */
 /**
  * @exports MemoryCacheListener
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: MemoryCacheListener.js 2912 2015-03-19 18:49:29Z tgaskins $
  */
 /**
  * Defines an interface for {@link MemoryCache} listeners.
@@ -69831,7 +69829,7 @@ define('cache/MemoryCacheListener',[
  */
 /**
  * @exports NominatimGeocoder
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: NominatimGeocoder.js 3133 2015-06-02 16:48:25Z tgaskins $
  */
 define('util/NominatimGeocoder',[
         '../util/Logger'
@@ -69893,7 +69891,7 @@ define('util/NominatimGeocoder',[
  */
 /**
  * @exports OpenStreetMapImageLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: OpenStreetMapImageLayer.js 3120 2015-05-28 02:32:45Z tgaskins $
  */
 define('layer/OpenStreetMapImageLayer',[
         '../geom/Angle',
@@ -70248,7 +70246,7 @@ define('projections/ProjectionGnomonic',[
  */
 /**
  * @exports ProjectionMercator
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ProjectionMercator.js 2821 2015-02-20 16:59:27Z dcollins $
  */
 define('projections/ProjectionMercator',[
         '../geom/Angle',
@@ -70445,7 +70443,7 @@ define('projections/ProjectionMercator',[
  */
 /**
  * @exports ProjectionPolarEquidistant
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ProjectionPolarEquidistant.js 2821 2015-02-20 16:59:27Z dcollins $
  */
 define('projections/ProjectionPolarEquidistant',[
         '../geom/Angle',
@@ -70713,7 +70711,7 @@ define('projections/ProjectionPolarEquidistant',[
  */
 /**
  * @exports ProjectionUPS
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ProjectionUPS.js 2821 2015-02-20 16:59:27Z dcollins $
  */
 define('projections/ProjectionUPS',[
         '../geom/Angle',
@@ -71088,7 +71086,7 @@ define('formats/kml/util/Scale',[
  */
 /**
  * @exports ByteBuffer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ByteBuffer.js 2954 2015-04-01 22:08:16Z danm $
  */
 define('util/ByteBuffer',['../error/ArgumentError',
         '../util/Logger'
@@ -71392,7 +71390,7 @@ define('util/ByteBuffer',['../error/ArgumentError',
  */
 /**
  * @exports DBaseField
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: DBaseField.js 2974 2015-04-03 19:52:11Z tgaskins $
  */
 define('formats/shapefile/DBaseField',['../../error/ArgumentError',
         '../../util/ByteBuffer',
@@ -71596,7 +71594,7 @@ define('formats/shapefile/DBaseField',['../../error/ArgumentError',
  */
 /**
  * @exports DBaseRecord
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: DBaseRecord.js 2980 2015-04-03 23:45:43Z danm $
  */
 define('formats/shapefile/DBaseRecord',['../../error/ArgumentError',
         '../../util/ByteBuffer',
@@ -71731,7 +71729,7 @@ define('formats/shapefile/DBaseRecord',['../../error/ArgumentError',
  */
 /**
  * @exports DBaseFile
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: DBaseFile.js 2985 2015-04-06 23:23:35Z danm $
  */
 define('formats/shapefile/DBaseFile',['../../error/ArgumentError',
         '../../util/ByteBuffer',
@@ -72115,7 +72113,7 @@ define('formats/shapefile/DBaseFile',['../../error/ArgumentError',
  */
 /**
  * @exports PrjFile
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: PrjFile.js 2960 2015-04-02 01:17:06Z danm $
  */
 define('formats/shapefile/PrjFile',['../../error/ArgumentError',
         '../../util/Logger',
@@ -72440,7 +72438,7 @@ define('formats/shapefile/PrjFile',['../../error/ArgumentError',
  */
 /**
  * @exports ShapefileRecord
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ShapefileRecord.js 3190 2015-06-15 19:30:14Z tgaskins $
  */
 define('formats/shapefile/ShapefileRecord',[
         '../../geom/Angle',
@@ -72953,7 +72951,7 @@ define('formats/shapefile/ShapefileRecord',[
  */
 /**
  * @exports ShapefileRecordMultiPoint
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ShapefileRecordMultiPoint.js 2984 2015-04-06 23:00:34Z danm $
  */
 define('formats/shapefile/ShapefileRecordMultiPoint',['../../util/ByteBuffer',
         '../../formats/shapefile/Shapefile',
@@ -72994,7 +72992,7 @@ define('formats/shapefile/ShapefileRecordMultiPoint',['../../util/ByteBuffer',
  */
 /**
  * @exports ShapefileRecordNull
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ShapefileRecordNull.js 2984 2015-04-06 23:00:34Z danm $
  */
 define('formats/shapefile/ShapefileRecordNull',['../../formats/shapefile/Shapefile',
         '../../formats/shapefile/ShapefileRecord'
@@ -73033,7 +73031,7 @@ define('formats/shapefile/ShapefileRecordNull',['../../formats/shapefile/Shapefi
  */
 /**
  * @exports ShapefileRecordPoint
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ShapefileRecordPoint.js 2984 2015-04-06 23:00:34Z danm $
  */
 define('formats/shapefile/ShapefileRecordPoint',['../../formats/shapefile/Shapefile',
         '../../formats/shapefile/ShapefileRecord'
@@ -73072,7 +73070,7 @@ define('formats/shapefile/ShapefileRecordPoint',['../../formats/shapefile/Shapef
  */
 /**
  * @exports ShapefileRecordPolygon
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ShapefileRecordPolygon.js 2984 2015-04-06 23:00:34Z danm $
  */
 define('formats/shapefile/ShapefileRecordPolygon',['../../formats/shapefile/Shapefile',
         '../../formats/shapefile/ShapefileRecord'
@@ -73111,7 +73109,7 @@ define('formats/shapefile/ShapefileRecordPolygon',['../../formats/shapefile/Shap
  */
 /**
  * @exports ShapefileRecordPolyline
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ShapefileRecordPolyline.js 2984 2015-04-06 23:00:34Z danm $
  */
 define('formats/shapefile/ShapefileRecordPolyline',['../../formats/shapefile/Shapefile',
         '../../formats/shapefile/ShapefileRecord'
@@ -73150,7 +73148,7 @@ define('formats/shapefile/ShapefileRecordPolyline',['../../formats/shapefile/Sha
  */
 /**
  * @exports Shapefile
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: Shapefile.js 3259 2015-06-25 00:53:55Z tgaskins $
  */
 define('formats/shapefile/Shapefile',[
         '../../geom/Angle',
@@ -74324,7 +74322,7 @@ define('formats/shapefile/Shapefile',[
  */
 /**
  * @exports ShowTessellationLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ShowTessellationLayer.js 3345 2015-07-28 20:28:35Z dcollins $
  */
 define('layer/ShowTessellationLayer',[
         '../shaders/BasicProgram',
@@ -74435,7 +74433,7 @@ define('layer/ShowTessellationLayer',[
  */
 /**
  * @exports SurfaceEllipse
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceEllipse.js 3014 2015-04-14 01:06:17Z danm $
  */
 define('shapes/SurfaceEllipse',[
         '../geom/Angle',
@@ -74648,7 +74646,7 @@ define('shapes/SurfaceEllipse',[
  */
 /**
  * @exports SurfaceCircle
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceCircle.js 3014 2015-04-14 01:06:17Z danm $
  */
 define('shapes/SurfaceCircle',[
         '../error/ArgumentError',
@@ -74743,7 +74741,7 @@ define('shapes/SurfaceCircle',[
  */
 /**
  * @exports SurfaceRectangle
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceRectangle.js 3195 2015-06-15 23:59:30Z tgaskins $
  */
 define('shapes/SurfaceRectangle',[
         '../geom/Angle',
@@ -74925,7 +74923,7 @@ define('shapes/SurfaceRectangle',[
  */
 /**
  * @exports SurfaceRenderable
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceRenderable.js 3351 2015-07-28 22:03:20Z dcollins $
  */
 define('render/SurfaceRenderable',['../util/Logger',
         '../error/UnsupportedOperationError'
@@ -74979,7 +74977,7 @@ define('render/SurfaceRenderable',['../util/Logger',
  */
 /**
  * @exports SurfaceSector
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: SurfaceSector.js 3014 2015-04-14 01:06:17Z danm $
  */
 define('shapes/SurfaceSector',[
         '../error/ArgumentError',
@@ -75067,7 +75065,7 @@ define('shapes/SurfaceSector',[
  */
 /**
  * @exports TapRecognizer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: TapRecognizer.js 3223 2015-06-19 23:16:36Z dcollins $
  */
 define('gesture/TapRecognizer',['../gesture/GestureRecognizer'],
     function (GestureRecognizer) {
@@ -75359,7 +75357,7 @@ define('layer/TectonicPlatesLayer',[
  */
 /**
  * @exports TileFactory
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: TileFactory.js 2664 2015-01-21 02:16:16Z tgaskins $
  */
 define('util/TileFactory',['../util/Logger',
         '../error/UnsupportedOperationError'
@@ -75792,7 +75790,7 @@ define('shapes/TriangleMesh',[
  */
 /**
  * @exports ViewControlsLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: ViewControlsLayer.js 3142 2015-06-03 15:37:54Z tgaskins $
  */
 define('layer/ViewControlsLayer',[
         '../geom/Angle',
@@ -77580,7 +77578,7 @@ define('ogc/WfsCapabilities',[
  */
 /**
  * @exports WmsLayerCapabilities
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: WmsLayerCapabilities.js 3055 2015-04-29 21:39:51Z tgaskins $
  */
 define('ogc/WmsLayerCapabilities',[
         '../error/ArgumentError',
@@ -78445,7 +78443,7 @@ define('ogc/WmsLayerCapabilities',[
  */
 /**
  * @exports WmsCapabilities
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: WmsCapabilities.js 3055 2015-04-29 21:39:51Z tgaskins $
  */
 define('ogc/WmsCapabilities',[
         '../error/ArgumentError',
@@ -78718,7 +78716,7 @@ define('ogc/WmsCapabilities',[
  */
 /**
  * @exports WmsLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: WmsLayer.js 3362 2015-07-31 19:29:12Z tgaskins $
  */
 define('layer/WmsLayer',[
         '../error/ArgumentError',
@@ -78913,7 +78911,7 @@ define('layer/WmsLayer',[
  */
 /**
  * @exports WmsTimeDimensionedLayer
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: WmsTimeDimensionedLayer.js 3362 2015-07-31 19:29:12Z tgaskins $
  */
 define('layer/WmsTimeDimensionedLayer',[
         '../error/ArgumentError',
@@ -79476,14 +79474,6 @@ define('ogc/WmtsCapabilities',[
                 // TODO: Keywords
             }
 
-            //TODO
-            if (!isNaN(tileMatrixSet.tileMatrix[0].identifier)) {
-                tileMatrixSet.tileMatrix.sort(function(a,b) {
-                    return parseFloat(a.identifier) - parseFloat(b.identifier);
-                })
-            }
-
-
             for (var i = 0; i < tileMatrixSet.tileMatrix.length; i++) {
                 tileMatrixSet.tileMatrix[i].levelNumber = i;
             }
@@ -79638,72 +79628,33 @@ define('layer/WmtsLayerTile',[
                         "The specified tile factory is null or undefined."));
             }
 
-            var subRow,
+            var subFactorLat,
+                subFactorLon,
+                subRow,
                 subCol,
                 children = [];
 
-            // TODO
-            var subFactorLatCeil = Math.ceil(tileMatrix.matrixHeight / this.tileMatrix.matrixHeight);
-            var subFactorLonCeil = Math.ceil(tileMatrix.matrixWidth / this.tileMatrix.matrixWidth);
-            var subFactorLatFloor = Math.floor(tileMatrix.matrixHeight / this.tileMatrix.matrixHeight);
-            var subFactorLonFloor = Math.floor(tileMatrix.matrixWidth / this.tileMatrix.matrixWidth);
+            subFactorLat = tileMatrix.matrixHeight / this.tileMatrix.matrixHeight;
+            subFactorLon = tileMatrix.matrixWidth / this.tileMatrix.matrixWidth;
 
+            subRow = subFactorLat * this.row;
+            subCol = subFactorLon * this.column;
+            children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
 
-            var indI = (this.row == (this.tileMatrix.matrixHeight-1)) ? subFactorLatFloor : subFactorLatCeil;
-            var indJ = (this.column == (this.tileMatrix.matrixWidth-1)) ? subFactorLonFloor : subFactorLonCeil;
+            subRow = subFactorLat * this.row;
+            subCol = subFactorLon * this.column + 1;
+            children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
 
-            for (var i = 0; i < indI ; i++) {
-                for (var j = 0; j < indJ ; j++) {
-                    subRow = subFactorLatCeil * this.row + i;
-                    subCol = subFactorLonCeil * this.column + j;
+            subRow = subFactorLat * this.row + 1;
+            subCol = subFactorLon * this.column;
+            children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
 
-                    children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
-                }
-            }
+            subRow = subFactorLat * this.row + 1;
+            subCol = subFactorLon * this.column + 1;
+            children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
 
             return children;
         };
-
-        /*WmtsLayerTile.prototype.subdivide = function (tileMatrix, tileFactory) {
-         if (!tileMatrix) {
-         throw new ArgumentError(
-         Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayerTile", "subdivide",
-         "The specified tile matrix is null or undefined."));
-         }
-
-         if (!tileFactory) {
-         throw new ArgumentError(
-         Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayerTile", "subdivide",
-         "The specified tile factory is null or undefined."));
-         }
-
-         var subFactorLat,
-         subFactorLon,
-         subRow,
-         subCol,
-         children = [];
-
-         subFactorLat = tileMatrix.matrixHeight / this.tileMatrix.matrixHeight;
-         subFactorLon = tileMatrix.matrixWidth / this.tileMatrix.matrixWidth;
-
-         subRow = subFactorLat * this.row;
-         subCol = subFactorLon * this.column;
-         children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
-
-         subRow = subFactorLat * this.row;
-         subCol = subFactorLon * this.column + 1;
-         children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
-
-         subRow = subFactorLat * this.row + 1;
-         subCol = subFactorLon * this.column;
-         children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
-
-         subRow = subFactorLat * this.row + 1;
-         subCol = subFactorLon * this.column + 1;
-         children.push(tileFactory.createTile(tileMatrix, subRow, subCol));
-
-         return children;
-         };*/
 
         WmtsLayerTile.prototype.subdivideToCache = function (tileMatrix, tileFactory, cache) {
             if (!tileMatrix) {
@@ -79799,7 +79750,6 @@ define('layer/WmtsLayerTile',[
         WmtsLayerTile.prototype.bind = function (dc) {
             var texture = dc.gpuResourceCache.resourceForKey(this.gpuCacheKey);
 
-
             if (texture && texture.bind(dc)) {
                 return true;
             }
@@ -79862,22 +79812,15 @@ define('layer/WmtsLayer',[
          * @constructor
          * @augments Layer
          * @classdesc Displays a WMTS image layer.
-         * @param {{}} config Specifies configuration information for the layer. Must contain the following
-         * properties:
-         * <ul>
-         *     <li>identifier: {String} The layer name.</li>
-         *     <li>service: {String} The URL of the WMTS server</li>
-         *     <li>format: {String} The mime type of the image format to request, e.g., image/png.</li>
-         *     <li>tileMatrixSet: {{}} The tile matrix set to use for this layer.</li>
-         *     <li>style: {String} The style to use for this layer.</li>
-         *     <li>title: {String} The display name for this layer.</li>
-         * </ul>
+         * @param {WmtsLayerCapabilities} layerCaps The WMTS layer capabilities describing this layer.
+         * @param {String} styleIdentifier The style to use for this layer. Must be one of those listed in the accompanying
+         * layer capabilities. May be null, in which case the WMTS server's default style is used.
          * @param {String} timeString The time parameter passed to the WMTS server when imagery is requested. May be
          * null, in which case no time parameter is passed to the server.
          * @throws {ArgumentError} If the specified layer capabilities reference is null or undefined.
          */
-        var WmtsLayer = function (config, timeString) {
-            if (!config) {
+        var WmtsLayer = function (layerCaps, styleIdentifier, timeString) {
+            if (!layerCaps) {
                 throw new ArgumentError(
                     Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "constructor",
                         "No layer configuration specified."));
@@ -79890,14 +79833,14 @@ define('layer/WmtsLayer',[
              * @type {String}
              * @readonly
              */
-            this.layerIdentifier = config.identifier;
+            this.layerIdentifier = layerCaps.identifier;
 
             /**
              * The style identifier specified to this layer's constructor.
              * @type {String}
              * @readonly
              */
-            this.styleIdentifier = config.style;
+            this.styleIdentifier = styleIdentifier;
 
             /**
              * The time string passed to this layer's constructor.
@@ -79906,71 +79849,119 @@ define('layer/WmtsLayer',[
              */
             this.timeString = timeString;
 
-            /**
-             * The image format specified to this layer's constructor.
-             * @type {String}
-             * @readonly
-             */
-            this.imageFormat = config.format;
+            // Determine image format
+            var formats = layerCaps.format;
 
-            /**
-             * The url specified to this layer's constructor.
-             * @type {String}
-             * @readonly
-             */
-            this.resourceUrl = config.resourceUrl;
-            this.serviceUrl = config.service;
+            if (formats.indexOf("image/png") >= 0) {
+                this.imageFormat = "image/png";
+            } else if (formats.indexOf("image/jpeg") >= 0) {
+                this.imageFormat = "image/jpeg";
+            } else if (formats.indexOf("image/tiff") >= 0) {
+                this.imageFormat = "image/tiff";
+            } else if (formats.indexOf("image/gif") >= 0) {
+                this.imageFormat = "image/gif";
+            } else {
+                this.imageFormat = formats[0];
+            }
 
-            /**
-             * The tileMatrixSet specified to this layer's constructor.
-             * @type {String}
-             * @readonly
-             */
-            this.tileMatrixSet = config.tileMatrixSet;
+            if (!this.imageFormat) {
+                throw new ArgumentError(
+                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "constructor",
+                        "Layer does not provide a supported image format."));
+            }
 
+            if (layerCaps.resourceUrl && (layerCaps.resourceUrl.length > 1)) {
+                for (var i = 0; i < layerCaps.resourceUrl.length; i++) {
+                    if (this.imageFormat === layerCaps.resourceUrl[i].format) {
+                        this.resourceUrl = layerCaps.resourceUrl[i].template;
+                        break;
+                    }
+                }
+            } else { // resource-oriented interface not supported, so use KVP interface
+                this.serviceUrl = layerCaps.capabilities.getGetTileKvpAddress();
+                if (this.serviceUrl) {
+                    this.serviceUrl = WmsUrlBuilder.fixGetMapString(this.serviceUrl);
+                }
+            }
+
+            if (!this.resourceUrl && !this.serviceUrl) {
+                throw new ArgumentError(
+                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "constructor",
+                        "No resource URL or KVP GetTile service URL specified in WMTS capabilities."));
+            }
+
+            // Validate that the specified style identifier exists, or determine one if not specified.
+            if (this.styleIdentifier) {
+                var styleIdentifierFound = false;
+                for (var i = 0; i < layerCaps.style.length; i++) {
+                    if (layerCaps.style[i].identifier === this.styleIdentifier) {
+                        styleIdentifierFound = true;
+                        break;
+                    }
+                }
+
+                if (!styleIdentifierFound) {
+                    Logger.logMessage(Logger.LEVEL_WARNING, "WmtsLayer", "constructor",
+                        "The specified style identifier is not available. The server's default style will be used.");
+                    this.styleIdentifier = null;
+                }
+            }
+
+            if (!this.styleIdentifier) {
+                for (i = 0; i < layerCaps.style.length; i++) {
+                    if (layerCaps.style[i].isDefault) {
+                        this.styleIdentifier = layerCaps.style[i].identifier;
+                        break;
+                    }
+                }
+            }
+
+            if (!this.styleIdentifier) {
+                Logger.logMessage(Logger.LEVEL_WARNING, "WmtsLayer", "constructor",
+                    "No default style available. A style will not be specified in tile requests.");
+            }
+
+            // Find the tile matrix set we want to use. Prefer EPSG:4326, then EPSG:3857.
+            var tms, tms4326 = null, tms3857 = null;
+            for (i = 0; i < layerCaps.tileMatrixSetLink.length; i++) {
+                tms = layerCaps.tileMatrixSetLink[i].tileMatrixSetRef;
+
+                if (WmtsLayer.isEpsg4326Crs(tms.supportedCRS)) {
+                    tms4326 = tms4326 || tms;
+                } else if (WmtsLayer.isEpsg3857Crs(tms.supportedCRS)) {
+                    tms3857 = tms3857 || tms;
+                }
+            }
+
+            this.tileMatrixSet = tms4326 || tms3857;
+
+            if (!this.tileMatrixSet) {
+                throw new ArgumentError(
+                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "constructor",
+                        "No supported Tile Matrix Set could be found."));
+            }
 
             // Determine the layer's sector if possible. Mandatory for EPSG:4326 tile matrix sets. (Others compute
             // it from tile Matrix Set metadata.)
-            /*********************************************************************************************************/
-            // Sometimes BBOX defined in Matrix and not in Layer
-            if (!config.wgs84BoundingBox && !config.boundingBox) {
-                if (this.tileMatrixSet.boundingBox) {
-                    this.sector = new Sector(
-                        config.tileMatrixSet.boundingBox.lowerCorner[1],
-                        config.tileMatrixSet.boundingBox.upperCorner[1],
-                        config.tileMatrixSet.boundingBox.lowerCorner[0],
-                        config.tileMatrixSet.boundingBox.upperCorner[0]);
-                }
-                else {
-                    // Throw an exception if there is no bounding box.
-                    throw new ArgumentError(
-                        Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "constructor",
-                            "No bounding box was specified in the layer or tile matrix set capabilities."));
-                }
-            }
-            /*********************************************************************************************************/
-            else if (config.wgs84BoundingBox) {
+            if (layerCaps.wgs84BoundingBox) {
                 this.sector = new Sector(
-                    config.wgs84BoundingBox.lowerCorner[1],
-                    config.wgs84BoundingBox.upperCorner[1],
-                    config.wgs84BoundingBox.lowerCorner[0],
-                    config.wgs84BoundingBox.upperCorner[0]);
+                    layerCaps.wgs84BoundingBox.lowerCorner[1],
+                    layerCaps.wgs84BoundingBox.upperCorner[1],
+                    layerCaps.wgs84BoundingBox.lowerCorner[0],
+                    layerCaps.wgs84BoundingBox.upperCorner[0]);
             } else if (this.tileMatrixSet.boundingBox &&
-                WmtsLayer.isEpsg4326Crs(this.tileMatrixSet.boundingBox.crs)) {
+                WmtsLayerCapabilities.isEpsg4326Crs(this.tileMatrixSet.boundingBox.crs)) {
                 this.sector = new Sector(
                     this.tileMatrixSet.boundingBox.lowerCorner[1],
                     this.tileMatrixSet.boundingBox.upperCorner[1],
                     this.tileMatrixSet.boundingBox.lowerCorner[0],
                     this.tileMatrixSet.boundingBox.upperCorner[0]);
-            } else if (WmtsLayer.isEpsg4326Crs(this.tileMatrixSet.supportedCRS)) {
-
+            } else if (WmtsLayerCapabilities.isEpsg4326Crs(this.tileMatrixSet.supportedCRS)) {
                 // Throw an exception if there is no 4326 bounding box.
                 throw new ArgumentError(
                     Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "constructor",
                         "No EPSG:4326 bounding box was specified in the layer or tile matrix set capabilities."));
             }
-
-
 
             // Form a unique string to identify cache entries.
             this.cachePath = (this.resourceUrl || this.serviceUrl) +
@@ -79979,13 +79970,14 @@ define('layer/WmtsLayer',[
                 this.cachePath = this.cachePath + timeString;
             }
 
-            /**
-             * The displayName specified to this layer's constructor.
-             * @type {String}
-             * @readonly
-             */
-            this.displayName = config.title;
+            // Determine a default display name.
+            if (layerCaps.title.length > 0) {
+                this.displayName = layerCaps.title[0].value;
+            } else {
+                this.displayName = layerCaps.identifier;
+            }
 
+            this.pickEnabled = false;
 
             this.currentTiles = [];
             this.currentTilesInvalid = true;
@@ -80004,313 +79996,6 @@ define('layer/WmtsLayer',[
              */
             this.detailControl = 1.75;
         };
-
-
-        /**
-         * Constructs a tile matrix set object.
-         * @param {{}} params Specifies parameters for the tile matrix set. Must contain the following
-         * properties:
-         * <ul>
-         *     <li>matrixSet: {String} The matrix name.</li>
-         *     <li>prefix: {Boolean} It represents if the identifier of the matrix must be prefixed by the matrix name.</li>
-         *     <li>projection: {String} The projection of the tiles.</li>
-         *     <li>topLeftCorner: {Array} The coordinates of the top left corner.</li>
-         *     <li>extent: {Array} The boundinx box for this matrix.</li>
-         *     <li>resolutions: {Array} The resolutions array.</li>
-         *     <li>matrixSet: {Number} The tile size.</li>
-         * </ul>
-         * @throws {ArgumentError} If the specified params.matrixSet is null or undefined. The name of the matrix to
-         * use for this layer.
-         * @throws {ArgumentError} If the specified params.prefix is null or undefined. It represents if the
-         * identifier of the matrix must be prefixed by the matrix name
-         * @throws {ArgumentError} If the specified params.projection is null or undefined.
-         * @throws {ArgumentError} If the specified params.extent is null or undefined.
-         * @throws {ArgumentError} If the specified params.resolutions is null or undefined.
-         * @throws {ArgumentError} If the specified params.tileSize is null or undefined.
-         * @throws {ArgumentError} If the specified params.topLeftCorner is null or undefined.
-         */
-        WmtsLayer.createTileMatrixSet = function(params) {
-
-            if (!params.matrixSet) { // matrixSet
-                throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "createTileMatrixSet",
-                        "No matrixSet provided."));
-            }
-            if (!params.projection) { // projection
-                throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "createTileMatrixSet",
-                        "No projection provided."));
-            }
-            if (!params.extent || params.extent.length != 4) { // extent
-                throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "createTileMatrixSet",
-                        "No extent provided."));
-            }
-
-            // Define the boundingBox
-            var boundingBox = {
-                lowerCorner : [params.extent[0], params.extent[1]],
-                upperCorner : [params.extent[2], params.extent[3]]
-            };
-
-            // Resolutions
-            if (!params.resolutions) {
-                throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "createTileMatrixSet",
-                        "No resolutions provided."));
-            }
-
-            // Tile size
-            if (!params.tileSize) {
-                throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "createTileMatrixSet",
-                        "No tile size provided."));
-            }
-
-            // Top left corner
-            if (!params.topLeftCorner || params.topLeftCorner.length != 2) {
-                throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "createTileMatrixSet",
-                        "No extent provided."));
-            }
-
-            // Prefix
-            if (params.prefix === undefined) {
-                throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "createTileMatrixSet",
-                        "Prefix not provided."));
-            }
-
-            // Check if the projection is supported
-            if (!(WmtsLayer.isEpsg4326Crs(params.projection) || WmtsLayer.isOGCCrs84(params.projection) || WmtsLayer.isEpsg3857Crs(params.projection))) {
-                throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "createTileMatrixSet",
-                        "Projection provided not supported."));
-            }
-
-            var tileMatrixSet = [],
-                scale;
-
-            // Construct the tileMatrixSet
-            for (var i = 0; i < params.resolutions.length; i++) {
-                // Compute the scaleDenominator
-                if (WmtsLayer.isEpsg4326Crs(params.projection) || WmtsLayer.isOGCCrs84(params.projection)) {
-                    scale = params.resolutions[i] * 6378137.0 * 2.0 * Math.PI / 360 / 0.00028;
-                } else if (WmtsLayer.isEpsg3857Crs(params.projection)) {
-                    scale = params.resolutions[i] / 0.00028;
-                }
-
-                // Compute the matrix width / height
-                var unitWidth = params.tileSize * params.resolutions[i];
-                var unitHeight = params.tileSize * params.resolutions[i];
-                var matrixWidth = Math.ceil((params.extent[2]-params.extent[0]-0.01*unitWidth)/unitWidth);
-                var matrixHeight = Math.ceil((params.extent[3]-params.extent[1]-0.01*unitHeight)/unitHeight);
-
-                // Define the tile matrix
-                var tileMatrix = {
-                    identifier : params.prefix ? params.matrixSet+":"+i : i,
-                    levelNumber : i,
-                    matrixHeight : matrixHeight,
-                    matrixWidth : matrixWidth,
-                    tileHeight : params.tileSize,
-                    tileWidth : params.tileSize,
-                    topLeftCorner : params.topLeftCorner,
-                    scaleDenominator : scale
-                };
-
-                tileMatrixSet.push(tileMatrix);
-            }
-
-
-            return {
-                identifier : params.matrixSet,
-                supportedCRS:params.projection,
-                boundingBox : boundingBox,
-                tileMatrix : tileMatrixSet
-            };
-        };
-
-
-
-        /**
-         * Forms a configuration object for a specified {@link WmtsLayerCapabilities} layer description. The
-         * configuration object created and returned is suitable for passing to the WmtsLayer constructor.
-         * <p>
-         *     This method also parses any time dimensions associated with the layer and returns them in the
-         *     configuration object's "timeSequences" property. This property is a mixed array of Date objects
-         *     and {@link PeriodicTimeSequence} objects describing the dimensions found.
-         * @param wmtsLayerCapabilities {WmtsLayerCapabilities} The WMTS layer capabilities to create a configuration for.
-         * @param style {string} The style to apply for this layer.  May be null, in which case the first style recognized is used.
-         * @param matrixSet {string} The matrix to use for this layer.  May be null, in which case the first tileMatrixSet recognized is used.
-         * @param imageFormat {string} The image format to use with this layer.  May be null, in which case the first image format recognized is used.
-         * @returns {{}} A configuration object.
-         * @throws {ArgumentError} If the specified WMTS layer capabilities is null or undefined.
-         */
-        WmtsLayer.formLayerConfiguration = function (wmtsLayerCapabilities, style, matrixSet, imageFormat) {
-
-            var config = {};
-
-            /**
-             * The WMTS layer identifier of this layer.
-             * @type {String}
-             * @readonly
-             */
-            config.identifier = wmtsLayerCapabilities.identifier;
-
-
-            // Validate that the specified image format exists, or determine one if not specified.
-            if (imageFormat) {
-                var formatIdentifierFound = false;
-                for (var i = 0; i < wmtsLayerCapabilities.format.length; i++) {
-                    if (wmtsLayerCapabilities.format[i] === imageFormat) {
-                        formatIdentifierFound = true;
-                        config.format = wmtsLayerCapabilities.format[i];
-                        break;
-                    }
-                }
-
-                if (!formatIdentifierFound) {
-                    Logger.logMessage(Logger.LEVEL_WARNING, "WmtsLayer", "formLayerConfiguration",
-                        "The specified image format is not available. Another one will be used.");
-                    config.format = null;
-                }
-            }
-
-            if (!config.format) {
-                if (wmtsLayerCapabilities.format.indexOf("image/png") >= 0) {
-                    config.format = "image/png";
-                } else if (wmtsLayerCapabilities.format.indexOf("image/jpeg") >= 0) {
-                    config.format = "image/jpeg";
-                } else if (wmtsLayerCapabilities.format.indexOf("image/tiff") >= 0) {
-                    config.format = "image/tiff";
-                } else if (wmtsLayerCapabilities.format.indexOf("image/gif") >= 0) {
-                    config.format = "image/gif";
-                } else {
-                    config.format = wmtsLayerCapabilities.format[0];
-                }
-            }
-
-            if (!config.format) {
-                throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "formLayerConfiguration",
-                        "Layer does not provide a supported image format."));
-            }
-
-            // Configure URL
-            if (wmtsLayerCapabilities.resourceUrl && (wmtsLayerCapabilities.resourceUrl.length >= 1)) {
-                for (var i = 0; i < wmtsLayerCapabilities.resourceUrl.length; i++) {
-                    if (config.format === wmtsLayerCapabilities.resourceUrl[i].format) {
-                        config.resourceUrl = wmtsLayerCapabilities.resourceUrl[i].template;
-                        break;
-                    }
-                }
-            } else { // resource-oriented interface not supported, so use KVP interface
-                config.service = wmtsLayerCapabilities.capabilities.getGetTileKvpAddress();
-
-                if (config.service) {
-                    config.service = WmsUrlBuilder.fixGetMapString(config.service);
-                }
-            }
-
-            if (!config.resourceUrl && !config.service) {
-                throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "formLayerConfiguration",
-                        "No resource URL or KVP GetTile service URL specified in WMTS capabilities."));
-            }
-
-            // Validate that the specified style identifier exists, or determine one if not specified.
-            if (style) {
-                var styleIdentifierFound = false;
-                for (var i = 0; i < wmtsLayerCapabilities.style.length; i++) {
-                    if (wmtsLayerCapabilities.style[i].identifier === style) {
-                        styleIdentifierFound = true;
-                        config.style = wmtsLayerCapabilities.style[i].identifier;
-                        break;
-                    }
-                }
-
-                if (!styleIdentifierFound) {
-                    Logger.logMessage(Logger.LEVEL_WARNING, "WmtsLayer", "formLayerConfiguration",
-                        "The specified style identifier is not available. The server's default style will be used.");
-                    config.style = null;
-                }
-            }
-
-            if (!config.style) {
-                for (i = 0; i < wmtsLayerCapabilities.style.length; i++) {
-                    if (wmtsLayerCapabilities.style[i].isDefault) {
-                        config.style = wmtsLayerCapabilities.style[i].identifier;
-                        break;
-                    }
-                }
-            }
-
-            if (!config.styleIdentifier) {
-                Logger.logMessage(Logger.LEVEL_WARNING, "WmtsLayer", "formLayerConfiguration",
-                    "No default style available. A style will not be specified in tile requests.");
-            }
-
-            // Validate that the specified style identifier exists, or determine one if not specified.
-            if (matrixSet) {
-                var tileMatrixSetFound = false;
-                for (var i = 0; i < wmtsLayerCapabilities.tileMatrixSetLink.length; i++) {
-                    if (wmtsLayerCapabilities.tileMatrixSetLink[i].tileMatrixSetRef.identifier === matrixSet) {
-                        tileMatrixSetFound = true;
-                        config.tileMatrixSet = wmtsLayerCapabilities.tileMatrixSetLink[i].tileMatrixSetRef;
-                        break;
-                    }
-                }
-
-                if (!tileMatrixSetFound) {
-                    Logger.logMessage(Logger.LEVEL_WARNING, "WmtsLayer", "formLayerConfiguration",
-                        "The specified tileMatrixSet is not available. Another one will be used.");
-                    config.tileMatrixSet = null;
-                }
-            }
-
-            if (!config.tileMatrixSet) {
-                // Find the tile matrix set we want to use. Prefer EPSG:4326, then EPSG:3857.
-                var tms, tms4326 = null, tms3857 = null, tmsCRS84 = null;
-
-                for (i = 0; i < wmtsLayerCapabilities.tileMatrixSetLink.length; i++) {
-                    tms = wmtsLayerCapabilities.tileMatrixSetLink[i].tileMatrixSetRef;
-
-                    if (WmtsLayer.isEpsg4326Crs(tms.supportedCRS)) {
-                        tms4326 = tms4326 || tms;
-                    } else if (WmtsLayer.isEpsg3857Crs(tms.supportedCRS)) {
-                        tms3857 = tms3857 || tms;
-                    }
-                    else if (WmtsLayer.isOGCCrs84(tms.supportedCRS)) {
-                        tmsCRS84 = tmsCRS84 || tms;
-                    }
-                }
-
-                config.tileMatrixSet = tms4326 || tms3857 || tmsCRS84;
-            }
-
-            if (!config.tileMatrixSet) {
-                throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "WmtsLayer", "formLayerConfiguration",
-                        "No supported Tile Matrix Set could be found."));
-            }
-
-            // Configure boundingBox
-            config.boundingBox = wmtsLayerCapabilities.boundingBox;
-            config.wgs84BoundingBox = wmtsLayerCapabilities.wgs84BoundingBox;
-
-
-
-            // Determine a default display name.
-            if (wmtsLayerCapabilities.title.length > 0) {
-                config.title = wmtsLayerCapabilities.title[0].value;
-            } else {
-                config.title = wmtsLayerCapabilities.identifier;
-            }
-
-
-            return config;
-        };
-
 
         WmtsLayer.prototype = Object.create(Layer.prototype);
 
@@ -80368,14 +80053,6 @@ define('layer/WmtsLayer',[
         };
 
         WmtsLayer.prototype.addTileOrDescendants = function (dc, tile) {
-            // Check if the new sub-tile fits in TileMatrix ranges
-            if (tile.column >= tile.tileMatrix.matrixWidth) {
-                tile.column = tile.column - tile.tileMatrix.matrixWidth;
-            }
-            if (tile.column < 0) {
-                tile.column = tile.column + tile.tileMatrix.matrixWidth;
-            }
-
             if (this.tileMeetsRenderingCriteria(dc, tile)) {
                 this.addTile(dc, tile);
                 return;
@@ -80388,6 +80065,7 @@ define('layer/WmtsLayer',[
                     ancestorTile = this.currentAncestorTile;
                     this.currentAncestorTile = tile;
                 }
+
                 var nextLevel = this.tileMatrixSet.tileMatrix[tile.tileMatrix.levelNumber + 1],
                     subTiles = tile.subdivideToCache(nextLevel, this, this.tileCache);
 
@@ -80501,12 +80179,12 @@ define('layer/WmtsLayer',[
 
             if (this.resourceUrl) {
                 url = this.resourceUrl.replace("{Style}", this.styleIdentifier).
-                replace("{TileMatrixSet}", this.tileMatrixSet.identifier).
-                replace("{TileMatrix}", tile.tileMatrix.identifier).
-                replace("{TileCol}", tile.column).replace("{TileRow}", tile.row);
+                    replace("{TileMatrixSet}", this.tileMatrixSet.identifier).
+                    replace("{TileMatrix}", tile.tileMatrix.identifier).
+                    replace("{TileCol}", tile.column).replace("{TileRow}", tile.row);
 
                 if (this.timeString) {
-                    url = url.replace("{Time}", this.timeString);
+                    url.replace("{Time}", this.timeString);
                 }
             } else {
                 url = this.serviceUrl + "service=WMTS&request=GetTile&version=1.0.0";
@@ -80543,6 +80221,7 @@ define('layer/WmtsLayer',[
             var tileMatrix = this.tileMatrixSet.tileMatrix[0];
 
             this.topLevelTiles = [];
+
             for (var j = 0; j < tileMatrix.matrixHeight; j++) {
                 for (var i = 0; i < tileMatrix.matrixWidth; i++) {
                     this.topLevelTiles.push(this.createTile(tileMatrix, j, i));
@@ -80556,28 +80235,7 @@ define('layer/WmtsLayer',[
             } else if (WmtsLayer.isEpsg3857Crs(this.tileMatrixSet.supportedCRS)) {
                 return this.createTile3857(tileMatrix, row, column);
             }
-            //TODO
-            else if (WmtsLayer.isOGCCrs84(this.tileMatrixSet.supportedCRS)) {
-                return this.createTileCrs84(tileMatrix, row, column);
-            }
-
         };
-
-
-        // TODO
-        WmtsLayer.prototype.createTileCrs84 = function (tileMatrix, row, column) {
-            var tileDeltaLat = this.sector.deltaLatitude() / tileMatrix.matrixHeight, // TODO: calculate from metadata
-                tileDeltaLon = this.sector.deltaLongitude() / tileMatrix.matrixWidth,
-                maxLat = tileMatrix.topLeftCorner[1] - row * tileDeltaLat,
-                minLat = maxLat - tileDeltaLat,
-                minLon = tileMatrix.topLeftCorner[0] + tileDeltaLon * column,
-                maxLon = minLon + tileDeltaLon;
-
-            var sector = new Sector(minLat, maxLat, minLon, maxLon);
-
-            return this.makeTile(sector, tileMatrix, row, column);
-        };
-
 
         WmtsLayer.prototype.createTile4326 = function (tileMatrix, row, column) {
             var tileDeltaLat = this.sector.deltaLatitude() / tileMatrix.matrixHeight, // TODO: calculate from metadata
@@ -80638,6 +80296,7 @@ define('layer/WmtsLayer',[
         WmtsLayer.prototype.makeTile = function (sector, tileMatrix, row, column) {
             var path = this.cachePath + "-layer/" + tileMatrix.identifier + "/" + row + "/" + column + "."
                 + WWUtil.suffixForMimeType(this.imageFormat);
+
             return new WmtsLayerTile(sector, tileMatrix, row, column, path);
         };
 
@@ -80646,10 +80305,6 @@ define('layer/WmtsLayer',[
                 return new Texture(dc.currentGlContext, image);
             } else if (WmtsLayer.isEpsg3857Crs(this.tileMatrixSet.supportedCRS)) {
                 return this.createTexture3857(dc, tile, image);
-            }
-            // TODO
-            else if (WmtsLayer.isOGCCrs84(this.tileMatrixSet.supportedCRS)) {
-                return new Texture(dc.currentGlContext, image);
             }
         };
 
@@ -80707,7 +80362,7 @@ define('layer/WmtsLayer',[
         };
 
         WmtsLayer.isEpsg4326Crs = function (crs) {
-            return ((crs.indexOf("EPSG") >= 0) && (crs.indexOf("4326") >= 0));
+            return (crs.indexOf("EPSG") >= 0) && (crs.indexOf("4326") >= 0);
         };
 
         WmtsLayer.isEpsg3857Crs = function (crs) {
@@ -80715,22 +80370,15 @@ define('layer/WmtsLayer',[
                 && ((crs.indexOf("3857") >= 0) || (crs.indexOf("900913") >= 0)); // 900913 is google's 3857 alias
         };
 
-
-        //TODO
-        WmtsLayer.isOGCCrs84 = function (crs) {
-            return (crs.indexOf("OGC") >= 0) && (crs.indexOf("CRS84") >= 0);
-        };
-
         return WmtsLayer;
     });
-
 /*
  * Copyright (C) 2014 United States Government as represented by the Administrator of the
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
  * @exports WorldWindow
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: WorldWindow.js 3402 2015-08-14 17:28:09Z tgaskins $
  */
 define('WorldWindow',[
         './error/ArgumentError',
@@ -81988,7 +81636,7 @@ define('WorldWindow',[
  */
 /**
  * @exports WWMessage
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: WWMessage.js 3418 2015-08-22 00:17:05Z tgaskins $
  */
 define('util/WWMessage',[],
     function () {
@@ -82026,7 +81674,7 @@ define('util/WWMessage',[],
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
- * @version $Id: worldwindlib.js 18487 2017-01-09 11:07:38Z sirac $
+ * @version $Id: WorldWind.js 3418 2015-08-22 00:17:05Z tgaskins $
  */
 define('WorldWind',[ // PLEASE KEEP ALL THIS IN ALPHABETICAL ORDER BY MODULE NAME (not directory name).
         './error/AbstractError',
@@ -82866,5 +82514,3 @@ define('WorldWind',[ // PLEASE KEEP ALL THIS IN ALPHABETICAL ORDER BY MODULE NAM
     //value.
     return require('WorldWind');
 }));
-
-//# sourceMappingURL=worldwindlib.js.map
